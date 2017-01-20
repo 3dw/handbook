@@ -5,11 +5,17 @@
 ##參與
 
 歡迎協作，請先：
+
 1. 註冊一個github帳號，並將帳號e-mail至bestian@gmail.com
+
 2. bestian會邀你進本專案並開協作權限
+
 3. 按watch訂閱所有本專案的議題討論(新議題會自動e-mail給你)
+
 4. 提問以及錯誤回報，盡量用github的議題區(issues)功能，以便分類匯整
+
 5. 提在議題區(issues)的訊息會自動e-mail給所有夥伴，所以不必常用e-mail
+
 
 
 ##開發
