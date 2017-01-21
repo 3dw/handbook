@@ -12,9 +12,9 @@
 
 3. 按watch訂閱所有本專案的議題討論(新議題會自動e-mail給你)
 
-4. 提問以及錯誤回報，盡量用github的議題區(issues)功能，以便分類匯整
+4. 提問以及錯誤回報，盡量用github的[議題區issues](https://github.com/3dw/handbook/issues)功能，以便分類匯整
 
-5. 提在議題區(issues)的訊息會自動e-mail給所有夥伴，所以不必常用e-mail
+5. 提在[議題區issues](https://github.com/3dw/handbook/issues)的訊息會自動e-mail給所有夥伴，所以不必常用e-mail
 
 
 
@@ -23,7 +23,7 @@
 框架使用[ionic](https://ionicframework.com/)，請上去閱讀。
 
 本專案上手請：
-（其中任何步驟如果卡關，均屬正常，如果自己試了兩次不成，請盡快在議題區(issues)提出）
+（其中任何步驟如果卡關，均屬正常，如果自己試了兩次不成，請盡快在[議題區issues](https://github.com/3dw/handbook/issues)提出）
 
 
 1. 以github的方法，複製(clone)本專案
