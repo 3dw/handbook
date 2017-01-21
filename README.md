@@ -22,21 +22,25 @@
 
 框架使用[ionic](https://ionicframework.com/)，請上去閱讀。
 
-本專案上手請：（其中任何步驟如果卡關，均屬正常，請在議題區(issues)提出）
+本專案上手請：
+（其中任何步驟如果卡關，均屬正常，如果自己試了兩次不成，請盡快在議題區(issues)提出）
 
-1. clone本專案
 
-2. 下載ionic
+1. 以github的方法，複製(clone)本專案
 
-        npm install -g cordova ionic
+2. 下載並安裝[node.js](https://nodejs.org/en/)。這會同時安裝它的套件管理器npm
 
-3. 進入專案目錄，下載node模組
+3. 下載ionic。在命令列輸入
+     
+       npm install -g cordova ionic
+
+4. 進入專案目錄，下載相關的所有node模組
 
         npm install
 
-4. 用瀏覽器測試
+5. 用瀏覽器測試
 
         ionic serve
 
 
-5. 如果覺得需要一個綀習的沙盒(sandbox)，在裡面隨意嘗試都不影響共同的專案，請自己另外創立一個github專案，也使用ionic來做，給自己隨意練習，增進技藝。
+6. 如果覺得需要一個綀習的沙盒(sandbox)，在裡面隨意嘗試都不影響共同的專案，請自己另外創立一個github專案，也使用ionic來做，給自己隨意練習，增進技藝。
