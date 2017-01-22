@@ -16,7 +16,7 @@
 
 5. 提在[議題區issues](https://github.com/3dw/handbook/issues)的訊息會自動e-mail給所有夥伴，所以不必常用e-mail
 
-
+6. 學習資源的需求、分享以及擴充，請至[學習資源區](https://github.com/3dw/handbook/wiki/%E5%AD%B8%E7%BF%92%E8%B3%87%E6%BA%90)
 
 ##開發
 
