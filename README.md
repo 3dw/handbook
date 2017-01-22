@@ -20,7 +20,8 @@
 
 ##開發
 
-框架使用[ionic](https://ionicframework.com/)，請上去閱讀。
+框架使用[ionic2](https://ionicframework.com/)及[angular2](https://angular.io/)，請上去閱讀。
+(相關說明文主要都是英文或簡中，可選擇適合自己的來讀)
 
 本專案上手請：
 （其中任何步驟如果卡關，均屬正常，如果自己試了兩次不成，請盡快在[議題區issues](https://github.com/3dw/handbook/issues)提出）
