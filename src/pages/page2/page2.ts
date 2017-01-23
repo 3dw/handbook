@@ -2,12 +2,13 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 import { HandbookService } from '../../providers/handbook-service';
+import { OfflineHandbook } from '../../providers/offline-handbook';
 
 
 @Component({
   selector: 'page-page2',
   templateUrl: 'page2.html',
-  providers: [HandbookService]
+  providers: [HandbookService, OfflineHandbook]
 })
 export class Page2 {
   selectedItem: any;
@@ -20,37 +21,30 @@ export class Page2 {
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
-    public handbookService: HandbookService
+    public handbookService: HandbookService,
+    public offlineHandbook: OfflineHandbook
     ) {
 
+    this.loadOffline();
     this.loadBook();
 
     
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('item');
 
-    // Let's populate this page with some filler content for funzies
-    this.icons = ['flask', 
-                //  'football', 
-                  'basketball', 
-                  'paper-plane',
-                //  'build'
-                 ];
 
-    this.colors = ['primary', 
-                   'secondary', 
-                  // 'danger', 
-                  // 'light',
-                   'dark'];
-
-
+    this.icons = ['flask', 'basketball', 'paper-plane'];
+    this.colors = ['primary', 'secondary', 'dark'];
 
     this.faqs = [];
   }
 
+  loadOffline(){
+    //...
+  }
+
   loadBook(){
-     console.log(this.handbookService);
-    this.handbookService.load()
+     this.handbookService.load()
     .then(data => {
       this.handbook = data;
       this.faqs = data.faqs;
