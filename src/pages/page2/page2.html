@@ -10,6 +10,15 @@
 <ion-content>
   <ion-list>
     <button ion-item
+        *ngFor="let faq of faqs; let $index = index;">
+
+        <ion-icon [name]="'flask'" item-left></ion-icon>
+          方法 {{$index}}
+        <div class="item-note" item-right>
+          {{faq.q}}
+        </div>
+    </button>
+    <button ion-item
         *ngFor="let item of items"
         [color] = "item.color"
         (click)="itemTapped($event, item)">
