@@ -3,13 +3,16 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Page Two</ion-title>
+    <ion-title>自學方法</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+    <button ion-item
+        *ngFor="let item of items"
+        [color] = "item.color"
+        (click)="itemTapped($event, item)">
       <ion-icon [name]="item.icon" item-left></ion-icon>
       {{item.title}}
       <div class="item-note" item-right>
@@ -18,6 +21,10 @@
     </button>
   </ion-list>
   <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
+    <p>
+      這裡要改成連到「<b>{{selectedItem.title}}</b>的細節頁」
+      <br/>
+      細節頁應該只有一個page，用參數的方式決定呈現哪個問題與回答。
+    </p>
   </div>
 </ion-content>
