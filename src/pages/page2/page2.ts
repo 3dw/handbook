@@ -43,6 +43,7 @@ export class Page2 {
     .then(data => {
       this.handbook = data;
       this.faqs = data.faqs;
+      this.catagories = data.catagories;
       console.log(data);
     });
   }
