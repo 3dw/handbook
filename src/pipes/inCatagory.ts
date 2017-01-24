@@ -1,4 +1,4 @@
-import { Injectable, Pipe } from '@angular/core';
+import { Injectable, Pipe, PipeTransform } from '@angular/core';
 
 /*
   Generated class for the InCatagory pipe.
@@ -7,13 +7,10 @@ import { Injectable, Pipe } from '@angular/core';
   Angular 2 Pipes.
 */
 @Pipe({
-  name: 'in-catagory'
+  name: 'inCatagory'
 })
 @Injectable()
-export class InCatagory {
-  /*
-    Takes a value and makes it lowercase.
-   */
+export class InCatagory implements PipeTransform{
   transform(list: any[], c) {
     return list.filter(function (o) {
       return o.c == c;

@@ -30,7 +30,7 @@ export class Page2 {
     this.loadOffline();
     this.loadBook();
 
-    this.icons = ['flask', 'basketball', 'paper-plane'];
+    this.icons = ['flask', 'paper-plane'];
     this.colors = ['primary', 'secondary', 'dark'];
     this.faqs = [];
   }

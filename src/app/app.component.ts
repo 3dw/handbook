@@ -13,17 +13,18 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any = Page1;
+  pages: Array<{title: string, component: any, icon: string, color: string}>;
 
-  pages: Array<{title: string, component: any}>;
 
   constructor(public platform: Platform) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: '你不必上學', component: Page1 },
-      { title: '自學方法', component: Page2 }
+      { title: '你不必上學', component: Page1, icon: 'flask', color: 'primary' },
+      { title: '自學方法', component: Page2, icon: 'bonfire', color:'secondary' }
     ];
+
 
   }
 

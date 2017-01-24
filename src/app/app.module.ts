@@ -4,6 +4,7 @@ import { MyApp } from './app.component';
 import { Page1 } from '../pages/page1/page1';
 import { Page2 } from '../pages/page2/page2';
 import { QaDetialPage } from '../pages/qa-detial/qa-detial';
+import { InCatagory } from '../pipes/inCatagory'
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { QaDetialPage } from '../pages/qa-detial/qa-detial';
     MyApp,
     Page1,
     Page2,
-    QaDetialPage
+    QaDetialPage,
+    InCatagory
   ],
   imports: [
     IonicModule.forRoot(MyApp)
