@@ -17,6 +17,7 @@ export class Page2 {
   colors: string[];
   faqs: Array<{q: string, c: string, as: string[], es: any[]}>; // object[]?
   qa: {q: string, c: string, as: string[], es: any[]};
+  catagories:  Array<{t: string, color: string, icon:string, ion:any}>;
   handbook: any;
 
   constructor(

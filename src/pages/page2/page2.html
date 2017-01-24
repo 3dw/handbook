@@ -8,11 +8,11 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
+  <ion-item-group>
+    <ion-item-divider color="light">TEST</ion-item-divider>
     <button ion-item
         *ngFor="let faq of faqs; let $index = index;"
         (click)="itemTapped($event, faq)" >
-
         <ion-icon item-left
         [name]="icons[$index % 2]" 
         [color] = "colors[$index % 2]"> {{$index}}</ion-icon>
@@ -20,12 +20,5 @@
           {{faq.q}}
         </div>
     </button>
-  </ion-list>
-  <div *ngIf="selectedItem" padding>
-    <p>
-      這裡要改成連到「<b>{{selectedItem.title}}</b>的細節頁」
-      <br/>
-      細節頁應該只有一個page，用參數的方式決定呈現哪個問題與回答。
-    </p>
-  </div>
+  </ion-item-group>
 </ion-content>
