@@ -13,6 +13,11 @@ page-page1 {
 
   #main {
     text-align: center;
+    img {
+      max-height: 400px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
   }
 
 	p {

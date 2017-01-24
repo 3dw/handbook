@@ -10,14 +10,12 @@
 <ion-content>
   <ion-list>
     <button ion-item
-        *ngFor="let faq of faqs; let $index = index;">
+        *ngFor="let faq of faqs; let $index = index;"
+        (click)="itemTapped($event, faq)" >
 
         <ion-icon item-left
         [name]="icons[$index % 2]" 
-        [color] = "colors[$index % 2]"></ion-icon>
-        <div class="item-note" item-left>
-          {{$index}}
-        </div>
+        [color] = "colors[$index % 2]"> {{$index}}</ion-icon>
         <div class="item-note" item-right>
           {{faq.q}}
         </div>

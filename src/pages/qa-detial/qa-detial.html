@@ -1,0 +1,35 @@
+<!--
+  Generated template for the QaDetial page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{faq.q}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+	<ion-card>
+  	<ion-card-header color='primary'>
+		  <ion-icon name='bicycle'></ion-icon>
+			{{faq.q}}
+		</ion-card-header>
+		<ion-card-content>
+			<p *ngFor="let a of faq.as">
+		  	<ion-icon name='flask'></ion-icon>
+			  {{a}}			
+			</p>
+		</ion-card-content>
+		<ion-card-content>
+			<ion-icon name='happy'></ion-icon>
+		</ion-card-content>
+	</ion-card>
+
+
+</ion-content>

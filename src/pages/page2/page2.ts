@@ -4,18 +4,19 @@ import { NavController, NavParams } from 'ionic-angular';
 import { HandbookService } from '../../providers/handbook-service';
 import { OfflineHandbook } from '../../providers/offline-handbook';
 
+import { QaDetialPage } from '../qa-detial/qa-detial';
 
 @Component({
   selector: 'page-page2',
   templateUrl: 'page2.html',
-  providers: [HandbookService, OfflineHandbook]
+  providers: [HandbookService, OfflineHandbook, QaDetialPage]
 })
+
 export class Page2 {
-  selectedItem: any;
   icons: string[];
   colors: string[];
   faqs: Array<{q: string, c: string, as: string[], es: any[]}>; // object[]?
-
+  qa: {q: string, c: string, as: string[], es: any[]};
   handbook: any;
 
   constructor(
@@ -28,14 +29,8 @@ export class Page2 {
     this.loadOffline();
     this.loadBook();
 
-    
-    // If we navigated to this page, we will have an item available as a nav param
-    this.selectedItem = navParams.get('item');
-
-
     this.icons = ['flask', 'basketball', 'paper-plane'];
     this.colors = ['primary', 'secondary', 'dark'];
-
     this.faqs = [];
   }
 
@@ -53,10 +48,11 @@ export class Page2 {
   }
 
 
-  itemTapped(event, item) {
-    // That's strange, we're pushing to ourselves!
-    this.navCtrl.push(Page2, {      // <-- this shold change to page3(page_detail)
-      item: item
-    });
+  itemTapped(event, faq) {
+    this.navCtrl.push(QaDetialPage, {
+      qa: faq
+    })
+
+
   }
 }
