@@ -1,6 +1,18 @@
 page-qa-detial {
+	ion-card-header {
+		transform: scaleY(1.5);
+	}
 	p {
 		margin: 2em 0 !important;
-		line-height: 1.6 ;
+		line-height: 1.6;
+		&:first-child {
+		  font-weight: 900;
+		  font-size: 1.2em;
+		  text-shadow: 0 1px 0px #32db64;
+		}
+		&::first-letter {
+		  font-weight: 900;
+			font-size: 1.5em;
+		}
 	}
 }
