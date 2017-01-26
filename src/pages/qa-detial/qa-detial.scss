@@ -1,6 +1,7 @@
 page-qa-detial {
 	ion-card-header {
 		transform: scaleY(1.5);
+    -webkit-transform: scaleY(1.5);
 	}
 	p {
 		margin: 2em 0 !important;
