@@ -3,7 +3,6 @@ import { NavController, NavParams } from 'ionic-angular';
 
 import { HandbookService } from '../../providers/handbook-service';
 import { OfflineHandbook } from '../../providers/offline-handbook';
-
 import { QaDetialPage } from '../qa-detial/qa-detial';
 
 @Component({
