@@ -35,7 +35,7 @@
      
        npm install -g cordova ionic
 
-4. 進入專案目錄，下載相關的所有node模組
+4. 進入專案目錄(即clone下來的handbook資料夾)，下載相關的所有node模組
 
         npm install
 
