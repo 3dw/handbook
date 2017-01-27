@@ -9,20 +9,22 @@ import { HandbookService } from '../../providers/handbook-service';
   providers: [HandbookService]
 })
 export class Page1 {
-  catagories:  Array<{t: string, color: string, icon:string, ion:any}>;
+  c:  Array<{t: string, color: string, icon:string, ion:any}>;
   showFABs: Boolean;
+  sides: string[];
 
   constructor(
   	public navCtrl: NavController,
     public handbookService: HandbookService) {
     this.showFABs = false;
+    this.sides = ['top', 'right', 'bottom', 'left'];
     this.loadBook();    
   }
 
   loadBook(){
      this.handbookService.load()
     .then(data => {
-      this.catagories = data.catagories;
+      this.c = data.catagories;
       console.log(data); // tester
     });
   }
