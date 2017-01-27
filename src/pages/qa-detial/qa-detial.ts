@@ -26,4 +26,11 @@ export class QaDetialPage {
     console.log('ionViewDidLoad QaDetialPage');
   }
 
+  goBack(e) {
+    // if (e.direction == 2){
+        //direction 2 = right to left swipe.
+    //    this.navCtrl.pop()
+    //}
+  }
+
 }
