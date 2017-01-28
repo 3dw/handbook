@@ -3,7 +3,8 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>自學方法</ion-title>
+    <ion-title *ngIf="focusC">{{focusC.t}}</ion-title>
+    <ion-title *ngIf="!focusC">自學方法</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -25,14 +26,15 @@
     <ion-item-divider color="light">所有分類</ion-item-divider>
     <button ion-item 
         *ngFor="let c of catagories; let $k = index;"
+        class="gray" 
         [ngClass] = "{'active': c.t == focusC.t}"
         (tap)="cataTapped($event, c)" >
-        <ion-icon item-left
-        [name]="c.ion.icon" 
-        color = "secondary"></ion-icon>
-        <div class="item-note" item-right>
-          {{c.t}}
-        </div>
+          <ion-icon item-left
+          [name]="c.ion.icon" 
+          color = "secondary"></ion-icon>
+          <div class="item-note" item-right>
+            {{c.t}}
+          </div>
     </button>
   </ion-item-group>
 

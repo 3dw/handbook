@@ -13,41 +13,13 @@
     自學不難，只要有方法
   </h3>
   
-  <ion-card id="main" (tap)="showFABs = true">
-    <img src = "img/lead.jpg" [hidden]="showFABs"/>
-    <ion-fab center middle *ngIf="showFABs" (press)="showFABs = false">
-      <button ion-fab color="danger"><ion-icon name="md-share"></ion-icon></button>
-      <ion-fab-list side="top">
-        <button ion-fab color="secondary" (tap) = "actionTapped($event, c[0])">
-          <ion-icon [name]="c[0].ion.icon"></ion-icon>
-        </button>
-        <button ion-fab color="secondary" (tap) = "actionTapped($event, c[4])">
-          <ion-icon [name]="c[4].ion.icon"></ion-icon>
-        </button>
-      </ion-fab-list>
-      <ion-fab-list side="right">
-        <button ion-fab color="primary" (tap) = "actionTapped($event, c[1])">
-          <ion-icon [name]="c[1].ion.icon"></ion-icon>
-        </button>
-      </ion-fab-list>
-      <ion-fab-list side="bottom">
-        <button ion-fab color="secondary" (tap) = "actionTapped($event, c[2])">
-          <ion-icon [name]="c[2].ion.icon"></ion-icon>
-        </button>
-        <button ion-fab color="secondary" (tap) = "actionTapped($event, c[5])">
-          <ion-icon [name]="c[5].ion.icon"></ion-icon>
-        </button>
-      </ion-fab-list>
-      <ion-fab-list side="left">
-        <button ion-fab color="primary" (tap) = "actionTapped($event, c[3])">
-          <ion-icon [name]="c[3].ion.icon"></ion-icon>
-        </button>
-      </ion-fab-list>
-    </ion-fab>
+  <ion-card id="main" (tap)="gotoFabs($event)">
+    <img src = "img/lead.jpg"/>
   </ion-card>
 
   <br/>
 
-  <button ion-button secondary menuToggle [hidden]="showFABs">
-    <ion-icon name="arrow-back" item-left></ion-icon>&nbsp;瞭解更多</button>
+  <button ion-button secondary menuToggle>
+    <ion-icon name="arrow-back" item-left></ion-icon>&nbsp;瞭解更多
+    </button>
 </ion-content>

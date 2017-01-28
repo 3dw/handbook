@@ -59,8 +59,10 @@ export class Page2 {
   }
 
   cataTapped(event, c) {
-    this.navCtrl.push(Page2, {
-      focusC: c
-    })
+    if (c.t != this.focusC.t) {
+      this.navCtrl.push(Page2, {
+        focusC: c
+      })
+    }
   }
 }
