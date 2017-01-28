@@ -12,7 +12,7 @@ import { HandbookService } from '../../providers/handbook-service';
 @Component({
   selector: 'page-fabs',
   templateUrl: 'fabs.html',
-  providers: [HandbookService]
+  providers: [HandbookService, Page2]
 })
 export class FabsPage {
   c:  Array<{t: string, color: string, icon:string, ion:any}>;
