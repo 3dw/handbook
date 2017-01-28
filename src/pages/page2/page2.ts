@@ -57,4 +57,10 @@ export class Page2 {
       qa: faq
     })
   }
+
+  cataTapped(event, c) {
+    this.navCtrl.push(Page2, {
+      focusC: c
+    })
+  }
 }

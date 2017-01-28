@@ -22,6 +22,17 @@
           {{faq.q}}
         </div>
     </button>
+    <ion-item-divider color="light">其他分類</ion-item-divider>
+    <button ion-item
+        *ngFor="let c of catagories; let $k = index;"
+        (tap)="cataTapped($event, c)" >
+        <ion-icon item-left
+        [name]="c.ion.icon" 
+        [color] = "colors[$k % 2]"></ion-icon>
+        <div class="item-note" item-right>
+          {{c.t}}
+        </div>
+    </button>
   </ion-item-group>
 
 
