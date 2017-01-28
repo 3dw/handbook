@@ -10,7 +10,22 @@
 
 <ion-content>
 
-  <ion-item-group *ngFor="let c of catagories; let $j = index;">
+  <ion-item-group id="focus" *ngIf="focusC">
+    <ion-item-divider color="light">{{focusC.t}}</ion-item-divider>
+    <button ion-item
+        *ngFor="let faq of (faqs | inCatagory:focusC.t); let $k = index;"
+        (tap)="itemTapped($event, faq)" >
+        <ion-icon item-left
+        [name]="focusC.ion.icon" 
+        [color] = "colors[$k % 2]"></ion-icon>
+        <div class="item-note" item-right>
+          {{faq.q}}
+        </div>
+    </button>
+  </ion-item-group>
+
+
+  <ion-item-group [hidden]="focusC" *ngFor="let c of catagories; let $j = index;">
     <ion-item-divider color="light">{{c.t}}</ion-item-divider>
     <button ion-item
         *ngFor="let faq of (faqs | inCatagory:c.t); let $k = index;"
@@ -23,4 +38,9 @@
         </div>
     </button>
   </ion-item-group>
+
+
+
+
+
 </ion-content>

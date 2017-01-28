@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { HandbookService } from '../../providers/handbook-service';
+import { Page2 } from '../page2/page2';
 
 @Component({
   selector: 'page-page1',
@@ -27,6 +28,13 @@ export class Page1 {
       this.c = data.catagories;
       console.log(data); // tester
     });
+  }
+
+
+  actionTapped(event, myCatagory) {
+    this.navCtrl.push(Page2, {
+      focusC: myCatagory
+    })
   }
 
 }

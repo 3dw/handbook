@@ -18,6 +18,7 @@ export class Page2 {
   qa: {q: string, c: string, as: string[], es: any[]};
   catagories:  Array<{t: string, color: string, icon:string, ion:any}>;
   handbook: any;
+  focusC: any;
 
   constructor(
     public navCtrl: NavController, 
@@ -32,6 +33,8 @@ export class Page2 {
     this.icons = ['flask', 'paper-plane'];
     this.colors = ['primary', 'secondary', 'dark'];
     this.faqs = [];
+
+    this.focusC = navParams.get('focusC');
   }
 
   loadOffline(){
@@ -53,7 +56,5 @@ export class Page2 {
     this.navCtrl.push(QaDetialPage, {
       qa: faq
     })
-
-
   }
 }
