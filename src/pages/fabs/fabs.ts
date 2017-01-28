@@ -44,8 +44,4 @@ export class FabsPage {
       focusC: myCatagory
     })
   }
-
-  goBack(e){
-    this.navCtrl.pop();
-  }
 }
