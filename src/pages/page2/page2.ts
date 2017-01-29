@@ -5,6 +5,10 @@ import { HandbookService } from '../../providers/handbook-service';
 import { OfflineHandbook } from '../../providers/offline-handbook';
 import { QaDetialPage } from '../qa-detial/qa-detial';
 
+//slow navingation
+// try {animate: false}
+// try {}
+
 @Component({
   selector: 'page-page2',
   templateUrl: 'page2.html',
