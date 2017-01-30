@@ -50,3 +50,9 @@
 ## 手機實測
 
 1. 安裝ionic view這個app
+
+2. 申請一個ionic平台帳號，再寄給bestian
+
+3. bestian收到後，會把讀取權限分享給你
+
+4. 進入ionic view, 輸入專案id後，就能在手機上測試，也能帶給認識的人試用看看
