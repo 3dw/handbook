@@ -2,7 +2,7 @@
 自學問答集-手機App版
 
 
-##參與
+##參與版本控制
 
 歡迎協作，請先：
 
@@ -18,7 +18,7 @@
 
 6. 學習資源的需求、分享以及擴充，請至[學習資源區](https://github.com/3dw/handbook/wiki/%E5%AD%B8%E7%BF%92%E8%B3%87%E6%BA%90)
 
-##開發
+##開發環境
 
 框架使用[ionic2](https://ionicframework.com/)及[angular2](https://angular.io/)，請上去閱讀。
 (相關說明文主要都是英文或簡中，可選擇適合自己的來讀)
@@ -46,3 +46,7 @@
 6. 每次開始動手前先sync，告一段落請先測試過可以動之後，再commit+sync
 
 7. 方法不只一種，如果覺得需要一個綀習的沙盒(sandbox)，或想試用不同的開發框架或使用原生(native)來達成，請開新的專案或專案分支(branch)來實作。
+
+## 手機實測
+
+1. 安裝ionic view這個app
