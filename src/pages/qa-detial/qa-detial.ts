@@ -27,10 +27,16 @@ export class QaDetialPage {
   }
 
   goBack(e) {
+    // TRY THIS:
+
     // if (e.direction == 2){
         //direction 2 = right to left swipe.
     //    this.navCtrl.pop()
     //}
+  }
+
+  funnyEffect(idx){
+    // do someting...
   }
 
 }

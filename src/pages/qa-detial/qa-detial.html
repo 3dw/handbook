@@ -20,9 +20,9 @@
 			{{faq.q}}
 		</ion-card-header>
 		<ion-card-content>
-			<p *ngFor="let a of faq.as">
+			<p *ngFor="let a of faq.as; let $idx = index">
 			  {{a}}			
-			  <ion-icon name="happy" color="primary"></ion-icon>
+			  <ion-icon name="happy" color="primary" tap=(funnyEffect($idx))></ion-icon>
 			</p>
 		</ion-card-content>
 		<ion-card-content class="center">
