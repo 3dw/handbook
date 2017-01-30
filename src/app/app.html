@@ -11,6 +11,11 @@
         <ion-icon [name]="p.icon" item-left [color]="p.color"></ion-icon>
         {{p.title}}
       </button>
+      <ion-item-divider color="light">施工中</ion-item-divider>
+      <button menuClose ion-item *ngFor="let t of pages" (tap)="openPage(t)">
+        <ion-icon [name]="t.icon" item-left [color]="t.color"></ion-icon>
+        施工中
+      </button>
     </ion-list>
   </ion-content>
 

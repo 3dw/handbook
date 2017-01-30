@@ -14,6 +14,7 @@ export class MyApp {
 
   rootPage: any = Page1;
   pages: Array<{title: string, component: any, icon: string, color: string}>;
+  tools: Array<{title: string, component: any, icon: string, color: string}>;
 
 
   constructor(public platform: Platform) {
@@ -24,6 +25,8 @@ export class MyApp {
       { title: '首頁', component: Page1, icon: 'home', color: 'primary' },
       { title: '自學方法', component: Page2, icon: 'bonfire', color:'secondary' }
     ];
+
+    this.tools = this.pages; // <-- change this!
 
 
   }

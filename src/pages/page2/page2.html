@@ -3,16 +3,15 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title *ngIf="focusC">{{focusC.t}}</ion-title>
+    <ion-title *ngIf="focusC">分類索引</ion-title>
     <ion-title *ngIf="!focusC">自學方法</ion-title>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content>
-
   <ion-item-group id="focus" *ngIf="focusC">
-    <ion-item-divider color="light">{{focusC.t}}</ion-item-divider>
+    <ion-item-divider color="light">正在認識: 自學{{focusC.t}}</ion-item-divider>
     <button ion-item
         *ngFor="let faq of (faqs | inCatagory:focusC.t); let $k = index;"
         (tap)="itemTapped($event, faq)" >
