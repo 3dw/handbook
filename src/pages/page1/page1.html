@@ -14,10 +14,15 @@
   </h3>
   
   <ion-card id="main" (tap)="gotoFabs($event)">
-    <img src = "img/lead.jpg"/>
-  </ion-card>
+    <ion-card-content class="center">
+      <img src = "img/lead.jpg"/>
 
-  <br/>
+      <button ion-button secondary menuToggle>
+        <ion-icon name="arrow-up" item-left></ion-icon>&nbsp;按我
+    </button>
+
+    </ion-card-content>
+  </ion-card>
 
 <!--  <button ion-button secondary menuToggle>
     <ion-icon name="arrow-back" item-left></ion-icon>&nbsp;開始
