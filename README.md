@@ -8,15 +8,19 @@
 
 1. 註冊一個github帳號，並將帳號e-mail至bestian@gmail.com
 
-2. bestian會邀你進本專案並開協作權限
+2. bestian會邀你進本專案並開協作權限，請找到「接受邀請」的鈕按下去
 
 3. 按watch訂閱所有本專案的議題討論(新議題會自動e-mail給你)
 
-4. 提問以及錯誤回報，盡量用github的[議題區issues](https://github.com/3dw/handbook/issues)功能，以便分類匯整
+4. 請修改README.md，試著提交變更上傳
 
-5. 提在[議題區issues](https://github.com/3dw/handbook/issues)的訊息會自動e-mail給所有夥伴，所以不必常用e-mail
+----
 
-6. 學習資源的需求、分享以及擴充，請至[學習資源區](https://github.com/3dw/handbook/wiki/%E5%AD%B8%E7%BF%92%E8%B3%87%E6%BA%90)
+* 提問以及錯誤回報，多用github的[議題區issues](https://github.com/3dw/handbook/issues)功能，以便分類匯整
+
+* 提在[議題區issues](https://github.com/3dw/handbook/issues)的訊息會自動e-mail給所有夥伴
+
+* 學習資源的需求、分享以及擴充，請至[學習資源區](https://github.com/3dw/handbook/wiki/%E5%AD%B8%E7%BF%92%E8%B3%87%E6%BA%90)
 
 ##開發環境
 
