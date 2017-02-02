@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { Page2 } from '../page2/page2';
 import { HandbookService } from '../../providers/handbook-service';
+import { Observable } from 'rxjs/Rx';
 
 /*
   Generated class for the Fabs page.
@@ -16,6 +17,7 @@ import { HandbookService } from '../../providers/handbook-service';
 })
 export class FabsPage {
   c:  Array<{t: string, color: string, icon:string, ion:any}>;
+  ticks: Number;
 
   constructor(
     public navCtrl: NavController,
@@ -23,8 +25,14 @@ export class FabsPage {
     public handbookService: HandbookService) {
 
     this.c = [];
+    this.ticks = 0;
     this.loadBook();    
+  }
 
+
+  ngOnInit(){
+    let timer = Observable.timer(1200,800);
+    timer.subscribe(t=>this.ticks = t);
   }
 
   ionViewDidLoad() {
@@ -34,7 +42,7 @@ export class FabsPage {
   loadBook(){
      this.handbookService.load()
     .then(data => {
-      this.c = data.catagories;
+      this.c = data.catagories.sort(() => Math.random() - 0.5);
       console.log(data); // tester
     });
   }

@@ -14,26 +14,30 @@
 
 
 <ion-content padding>
-	<ion-fab center middle *ngIf="c && c.length">
+	<ion-fab center middle>
       <button ion-fab color="danger"><ion-icon name="md-share"></ion-icon></button>
-      <ion-fab-list side="top">
+      <ion-fab-list side="top" *ngIf="c && c.length">
         <button ion-fab middle color="secondary" (tap) = "actionTapped($event, c[0])">
-          <ion-icon [name]="c[0].ion.icon"></ion-icon>
+          <ion-icon [hidden] = "ticks % 4 == 0" [name]="c[0].ion.icon"></ion-icon>
+          <span [hidden] = "ticks % 4 != 0">{{c[0].t}}</span>
         </button>
       </ion-fab-list>
-      <ion-fab-list side="right">
+      <ion-fab-list side="right" *ngIf="c && c.length">
         <button ion-fab color="secondary" (tap) = "actionTapped($event, c[1])">
-          <ion-icon [name]="c[1].ion.icon"></ion-icon>
+          <ion-icon [hidden] = "ticks % 4 == 1" [name]="c[1].ion.icon"></ion-icon>
+          <span [hidden] = "ticks % 4 != 1">{{c[1].t}}</span>
         </button>
       </ion-fab-list>
-      <ion-fab-list side="bottom">
+      <ion-fab-list side="bottom" *ngIf="c && c.length">
         <button ion-fab color="secondary" (tap) = "actionTapped($event, c[2])">
-          <ion-icon [name]="c[2].ion.icon"></ion-icon>
+          <ion-icon [hidden] = "ticks % 4 == 2" [name]="c[2].ion.icon"></ion-icon>
+          <span [hidden] = "ticks % 4 != 2">{{c[2].t}}</span>
         </button>
       </ion-fab-list>
-      <ion-fab-list side="left">
+      <ion-fab-list side="left" *ngIf="c && c.length">
         <button ion-fab color="secondary" (tap) = "actionTapped($event, c[3])">
-          <ion-icon [name]="c[3].ion.icon"></ion-icon>
+          <ion-icon [hidden] = "ticks % 4 == 3" [name]="c[3].ion.icon"></ion-icon>
+          <span [hidden] = "ticks % 4 != 3">{{c[3].t}}</span>
         </button>
       </ion-fab-list>
     </ion-fab>
