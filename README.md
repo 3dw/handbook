@@ -35,7 +35,7 @@
 
 2. 下載並安裝[node.js](https://nodejs.org/en/)。這會同時安裝它的套件管理器npm
 
-3. 下載ionic。在命令列輸入
+3. 下載ionic。在命令列(window則是在node command prompt)輸入
      
        npm install -g cordova ionic
 
