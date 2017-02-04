@@ -18,6 +18,7 @@ import { Observable } from 'rxjs/Rx';
 export class FabsPage {
   c:  Array<{t: string, color: string, icon:string, ion:any}>;
   ticks: Number;
+  tocks: Number;
 
   constructor(
     public navCtrl: NavController,
@@ -26,6 +27,7 @@ export class FabsPage {
 
     this.c = [];
     this.ticks = 0;
+    this.tocks = 0;
     this.loadBook();    
   }
 
@@ -33,6 +35,9 @@ export class FabsPage {
   ngOnInit(){
     let timer = Observable.timer(1200,800);
     timer.subscribe(t=>this.ticks = t);
+
+    let timer2 = Observable.timer(800,400);
+    timer2.subscribe(t=>this.tocks = t);
   }
 
   ionViewDidLoad() {
