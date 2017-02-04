@@ -35,9 +35,9 @@
 
 2. 下載並安裝[node.js](https://nodejs.org/en/)。這會同時安裝它的套件管理器npm
 
-3. 下載ionic。在命令列(window則是在node command prompt)輸入
-     
-       npm install -g cordova ionic
+3. 下載ionic。在命令列(window系統則是在node command prompt)輸入
+
+        npm install -g cordova ionic
 
 4. 進入專案目錄(即clone下來的handbook資料夾)，下載相關的所有node模組
 
