@@ -1,3 +1,42 @@
 page-fabs {
+	#funny {
+		animation: glow 1s 3;
+		-webkit-animation: glow .8s 3;
 
+	}
+	.fun {
+		animation: glow 1s infinite;
+		-webkit-animation: glow .8s infinite;
+	}
+	span {
+		font-size: 1.2em;
+		font-weight: 900;
+	}
 }
+
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes glow {
+  0% {
+    border: 0;
+  }
+  50% {
+    border: 5px dotted gold;
+  }
+  100% {
+		border: 0;
+  }
+}
+
