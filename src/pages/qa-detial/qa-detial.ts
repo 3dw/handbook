@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-//import { Storage, LocalStorage } from 'ionic-angular';
-
 
 /*
   Generated class for the QaDetial page.
@@ -15,7 +13,7 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class QaDetialPage {
 	faq: Array<{q: string, c: string, as: string[], es: any[]}>;
-  //local: any;
+  storage: any;
 
   constructor(
   	public navCtrl: NavController,
@@ -23,7 +21,6 @@ export class QaDetialPage {
 
     // If we navigated to this page, we will have an item available as a nav param
     this.faq = navParams.get('qa');
-    //this.local = new Storage(LocalStorage);
 
   }
 
