@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { Observable } from 'rxjs/Rx';
 import { Page2 } from '../page2/page2';
 import { HandbookService } from '../../providers/handbook-service';
-import { Observable } from 'rxjs/Rx';
+import { OfflineHandbook } from '../../providers/offline-handbook';
 
 /*
   Generated class for the Fabs page.
@@ -13,7 +14,7 @@ import { Observable } from 'rxjs/Rx';
 @Component({
   selector: 'page-fabs',
   templateUrl: 'fabs.html',
-  providers: [HandbookService, Page2]
+  providers: [HandbookService, OfflineHandbook, Page2]
 })
 export class FabsPage {
   c:  Array<{t: string, color: string, icon:string, ion:any}>;
@@ -23,11 +24,14 @@ export class FabsPage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    public handbookService: HandbookService) {
+    public handbookService: HandbookService,
+    public offlineHandbook: OfflineHandbook) {
 
-    this.c = [];
     this.ticks = 0;
     this.tocks = 0;
+
+    this.c = [];
+    this.c = offlineHandbook.data.catagories.sort(() => Math.random() - 0.5);
     this.loadBook();    
   }
 
@@ -45,10 +49,9 @@ export class FabsPage {
   }
 
   loadBook(){
-     this.handbookService.load()
+    this.handbookService.load()
     .then(data => {
       this.c = data.catagories.sort(() => Math.random() - 0.5);
-      console.log(data); // tester
     });
   }
 

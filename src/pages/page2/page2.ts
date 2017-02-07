@@ -18,7 +18,7 @@ import { QaDetialPage } from '../qa-detial/qa-detial';
 export class Page2 {
   icons: string[];
   colors: string[];
-  faqs: Array<{q: string, c: string, as: string[], es: any[]}>; // object[]?
+  faqs: Array<{q: string, c: string, as: string[], es: any[]}>;
   qa: {q: string, c: string, as: string[], es: any[]};
   catagories:  Array<{t: string, color: string, icon:string, ion:any}>;
   handbook: any;
@@ -31,27 +31,27 @@ export class Page2 {
     public offlineHandbook: OfflineHandbook
     ) {
 
-    this.loadOffline();
+    this.faqs = [];
+
+    var data = offlineHandbook.data;
+    this.handbook = data;
+    this.faqs = data.faqs;
+    this.catagories = data.catagories;
     this.loadBook();
 
     this.icons = ['flask', 'paper-plane'];
     this.colors = ['primary', 'secondary', 'dark'];
-    this.faqs = [];
 
     this.focusC = navParams.get('focusC');
   }
 
-  loadOffline(){
-    //...
-  }
 
-  loadBook(){
-     this.handbookService.load()
+  loadBook(){    
+    this.handbookService.load()
     .then(data => {
       this.handbook = data;
       this.faqs = data.faqs;
       this.catagories = data.catagories;
-      console.log(data);
     });
   }
 
