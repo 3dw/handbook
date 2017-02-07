@@ -43,7 +43,7 @@
 
         npm install
 
-5. 用瀏覽器測試(加入--lab可以同時測ios, andriod, windows三種平台上的使用)
+5. 用瀏覽器測試(加--lab可以同時測ios, andriod, windows三種平台，不加--lab比較快)
 
         ionic serve --lab
 
