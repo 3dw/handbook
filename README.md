@@ -43,9 +43,9 @@
 
         npm install
 
-5. 用瀏覽器測試
+5. 用瀏覽器測試(加入--lab可以同時測ios, andriod, windows三種平台上的使用)
 
-        ionic serve
+        ionic serve --lab
 
 6. 每次開始動手前先sync，告一段落請先測試過可以動之後，再commit+sync
 
