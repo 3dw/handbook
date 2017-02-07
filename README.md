@@ -69,4 +69,4 @@
 
 2. https://angular.io/ (Angular框架)
 
-3. https://material.io/guidelines/ (Material 介面設計指南)
+3. https://material.io/guidelines/ (Material Design 介面設計指南)
