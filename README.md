@@ -60,3 +60,13 @@
 3. bestian收到後，會把讀取權限分享給你
 
 4. 進入ionic view, 輸入專案id後，就能在手機上測試，也能帶給認識的人試用看看
+
+##開發資源
+
+以下是開發資源的文件參考:
+
+1. http://ionicframework.com/ (Ionic文件)
+
+2. https://angular.io/ (Angular框架)
+
+3. https://material.io/guidelines/ (Material 介面設計指南)
