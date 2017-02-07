@@ -6,7 +6,7 @@
 
 歡迎協作，請先：
 
-1. 註冊一個github帳號，並將帳號e-mail至bestian@gmail.com
+1. 註冊一個Github帳號，並將帳號e-mail至bestian@gmail.com
 
 2. bestian會邀你進本專案並開協作權限，請找到「接受邀請」的鈕按下去
 
@@ -16,11 +16,11 @@
 
 ----
 
-* 提問以及錯誤回報，多用github的[議題區issues](https://github.com/3dw/handbook/issues)功能，以便分類匯整
+* **更多問題**與**錯誤回報**，使用github免費提供的[議題區issues](https://github.com/3dw/handbook/issues)功能，以便分類匯整
 
-* 提在[議題區issues](https://github.com/3dw/handbook/issues)的訊息會自動e-mail給所有夥伴
+* 在[議題區issues](https://github.com/3dw/handbook/issues)所提出的問題與答案都會利用Email傳給大家
 
-* 學習資源的需求、分享以及擴充，請至[學習資源區](https://github.com/3dw/handbook/wiki/%E5%AD%B8%E7%BF%92%E8%B3%87%E6%BA%90)
+* 被稱作知識的寶庫、資源共享與資訊擴充，可以到[專案維基百科](https://github.com/3dw/handbook/wiki/%E5%AD%B8%E7%BF%92%E8%B3%87%E6%BA%90)
 
 ##開發環境
 
@@ -49,7 +49,7 @@
 
 6. 每次開始動手前先sync，告一段落請先測試過可以動之後，再commit+sync
 
-7. 方法不只一種，如果覺得需要一個綀習的沙盒(sandbox)，或想試用不同的開發框架或使用原生(native)來達成，請開新的專案或專案分支(branch)來實作。
+7. 寫程式就像做實驗，如果覺得需要一個綀習的沙盒(sandbox)，或想試用不同的開發框架或使用原生(native)來達成，請開新的專案或專案分支(branch)來實作。
 
 ## 手機實測
 
