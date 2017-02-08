@@ -5,17 +5,14 @@
 ##參與版本控制
 
 歡迎協作，請先：
-c
+
 1. 註冊一個Github帳號，並將帳號e-mail至bestian@gmail.com
-
 2. bestian會邀你進本專案並開協作權限，請找到「接受邀請」的鈕按下去
-
 3. 按watch訂閱所有本專案的議題討論(新議題會自動e-mail給你)
-
 4. 請修改README.md，試著提交變更上傳
 
 ----
-c
+
  * **更多問題**與**錯誤回報**，使用github免費提供的[議題區issues](https://github.com/3dw/handbook/issues)功能，以便分類匯整
 
 * 在[議題區issues](https://github.com/3dw/handbook/issues)所提出的問題與答案都會利用Email傳給大家
@@ -35,7 +32,7 @@ c
 3. 下載ionic。在命令列(window系統則是在node command prompt)輸入
 
         npm install -g cordova ionic水4. 進入專案目錄(即clone下來的handbook資料夾)，下載相關的所有node模組
-y
+
         npm install
  5. 用瀏覽器測試
 
@@ -44,14 +41,17 @@ y
 
 7. 寫程式就像做實驗，必須不斷的嘗試。因此我們需要一個讓我們為所欲為的沙盒(sandbox)，或想試用不同的開發框架或使用原生(native)來製作App，請開新的專案或專案分支(branch)來實作，不要更新再此專案。言
 ##瀏覽器摹擬
-目水* 優點: 較快* 缺點: 不能在真正帶出門的情境給別人看### 方法1：
-c* 優點: 跨平台測試(加--lab可以同時測ios, andriod, windows三種平台)
- * 缺點: 較慢
-     
+* 優點: 較快* 缺點: 不能在真正帶出門的情境給別人看
+
+### 方法1：
+* 優點: 跨平台測試(加--lab可以同時測ios, andriod, windows三種平台)
+* 缺點: 較慢
+
       ionic serve --lab
 
 ### 方法2：
 * 優點: 較快
+
       ionic serve
 
 可搭配使用瀏覽器的手機摹擬功能：
@@ -66,11 +66,8 @@ c* 優點: 跨平台測試(加--lab可以同時測ios, andriod, windows三種平
 * 缺點: 比較慢
 
 1. 安裝ionic view這個app
-
 2. 申請一個ionic平台帳號，再寄給bestian
-
 3. bestian收到後，會把讀取權限分享給你
-
 4. 進入ionic view, 輸入專案id後，就能在手機上測試，也能帶給認識的人試用看看
 
 ###方法2(用正規的方法傳輸到手機上deploy)
