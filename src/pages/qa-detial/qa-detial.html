@@ -15,15 +15,19 @@
 
 <ion-content padding (swipe) = "goBack($event)">
 	<ion-card>
-  	<ion-card-header color='primary'>
-		  <ion-icon name='bicycle'></ion-icon>
-			{{faq.q}}
+	  	<ion-card-header color='primary'>
+			<ion-icon name='bicycle'></ion-icon>
+				{{faq.q}}
+			<span class="tail"></span>
 		</ion-card-header>
 		<ion-card-content>
-			<p *ngFor="let a of faq.as; let $idx = index">
-			  {{a}}			
-			  <ion-icon name="happy" color="primary" tap=(funnyEffect($idx))></ion-icon>
-			</p>
+			<div *ngFor="let a of faq.as; let $idx = index">
+				<p>
+				 	{{a}}			
+				 	<ion-icon name="happy" color="primary" tap=(funnyEffect($idx))></ion-icon>
+					<span class="tail"></span>
+				</p>
+			</div>
 		</ion-card-content>
 		<ion-card-content class="center">
 			<button ion-button secondary menuToggle>

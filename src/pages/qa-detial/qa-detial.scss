@@ -1,18 +1,41 @@
 page-qa-detial {
 	ion-card-header {
-		transform: scaleY(1.3);
-    	-webkit-transform: scaleY(1.3);
+		position: relative;
+		margin: 1em 0.4em !important;
+		background-color: #ccf;
+		padding: 0.6em 0.4em;
+		border-radius: 1em;
+		overflow: visible;
+		.tail {
+			position: absolute;
+			bottom: -0.3em;
+			left: -0.3em;
+			background-color: #ccf;
+			width: 1em;
+			height: 1em;
+		}
 	}
 	p {
+		position: relative;
 		margin: 2em 0 !important;
 		line-height: 2;
 		background-color: #cfc;
+		padding: 0.6em 0.4em;
+		border-radius: 1em;
 		&:first-child {
 		  font-weight: 900;
 		}
 		&::first-letter {
 		  font-weight: 900;
 		  font-size: 1.5em;
+		}
+		.tail {
+			position: absolute;
+			bottom: -0.3em;
+			right: -0.3em;
+			background-color: #cfc;
+			width: 1em;
+			height: 1em;
 		}
 	}
 	.center {
