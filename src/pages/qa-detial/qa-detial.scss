@@ -20,17 +20,15 @@ page-qa-detial {
 	}
 	p {
 		position: relative;
+		font-size: 1.2em !important;
 		margin: 2em 0 !important;
 		line-height: 2;
 		background-color: #cfc;
 		padding: 0.6em 0.4em;
 		border-radius: 1em 1em 0 1em;
-		&:first-child {
-		  font-weight: 900;
-		}
 		&::first-letter {
 		  font-weight: 900;
-		  font-size: 1.5em;
+		  font-size: 1.2em;
 		}
 		.tail {
 			position: absolute;
