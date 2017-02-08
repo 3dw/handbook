@@ -35,12 +35,10 @@ export class QaDetialPage {
   }
 
   goBack(e) {
-    // TRY THIS:
-
-    // if (e.direction == 2){
+    if (e.direction == 2) {
         //direction 2 = right to left swipe.
-    //    this.navCtrl.pop()
-    //}
+        this.navCtrl.pop()
+    }
   }
 
   funnyEffect(idx){

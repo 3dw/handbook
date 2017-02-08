@@ -13,8 +13,8 @@
 </ion-header>
 
 
-<ion-content padding (swipe) = "goBack($event)">
-	<ion-card>
+<ion-content padding>
+	<ion-card (swipe) = "goBack($event)">
 	  	<ion-card-header color='primary'>
 			<ion-icon name='bicycle'></ion-icon>
 				{{faq.q}}
