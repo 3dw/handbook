@@ -4,17 +4,16 @@ page-qa-detial {
 		margin: 1em 0.4em !important;
 		background-color: #ccf;
 		padding: 0.6em 0.4em;
-		border-radius: 1em;
+		border-radius: 1em 1em 1em 0;
 		overflow: visible;
 		.tail {
 			position: absolute;
-			bottom: -0.3em;
-			left: -0.3em;
-			width:0;
+			bottom: -0.4em;
+			left: 0;
+			width: 0;
 			height: 0;
-			border-top: 1em solid #ccf;
-			border-left: 1em solid transparent;
-			border-left: 1em solid transparent;
+			border-top: 1.2em solid #ccf;
+			border-right: 1.5em solid transparent;
 		}
 	}
 	p {
@@ -23,7 +22,7 @@ page-qa-detial {
 		line-height: 2;
 		background-color: #cfc;
 		padding: 0.6em 0.4em;
-		border-radius: 1em;
+		border-radius: 1em 1em 0 1em;
 		&:first-child {
 		  font-weight: 900;
 		}
@@ -33,11 +32,12 @@ page-qa-detial {
 		}
 		.tail {
 			position: absolute;
-			bottom: -0.3em;
-			right: -0.3em;
-			background-color: #cfc;
-			width: 1em;
-			height: 1em;
+			bottom: -0.6em;
+			right: 0;
+			width: 0;
+			height: 0;
+			border-top: 1.2em solid #cfc;
+			border-left: 1.5em solid transparent;
 		}
 	}
 	.center {
