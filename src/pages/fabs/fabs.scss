@@ -4,11 +4,14 @@ page-fabs {
 		font-weight: 900;
 	}
 	ion-fab {
+		.fab ion-icon {
+			font-size: 50px;
+		}
 		button {
 		}
 		.glow {
 			transform: scale(1.2);
-			border: 5px dotted #ffd700  // gold;
+			border: 3px dotted #ffd700  // gold;
 		}
 	}
 
