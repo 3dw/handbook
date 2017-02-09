@@ -37,7 +37,7 @@ export class FabsPage {
 
 
   ngOnInit(){
-    let timer = Observable.timer(1200,800);
+    let timer = Observable.timer(1200,1000);
     timer.subscribe(t=>this.ticks = t);
 
     let timer2 = Observable.timer(800,400);

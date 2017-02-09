@@ -15,7 +15,7 @@
 
 <ion-content padding>
 	<ion-fab center middle>
-      <button [ngClass] = "{'glow': tocks % 2 == 0 && tocks < 8}" ion-fab color="danger"><ion-icon name="md-add"></ion-icon></button>
+      <button [ngClass] = "{'glow': tocks % 2 == 0 && tocks < 8}" ion-fab color="humor"><ion-icon name="md-add"></ion-icon></button>
       <ion-fab-list side="top" *ngIf="c && c.length">
         <button class="glow" ion-fab middle color="secondary" (tap) = "actionTapped($event, c[0])">
           <ion-icon [hidden] = "ticks % 4 == 0" [name]="c[0].ion.icon"></ion-icon>

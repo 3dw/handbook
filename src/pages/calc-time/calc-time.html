@@ -5,17 +5,18 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>時間精靈</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding (swipe) = "goBack($event)">
 	<p>
-	根據許多領域達人的經驗，無論資質如何聰穎，都要在你感興趣的領域，投入大約一萬小時之後，才能進到達人的水平。
+	根據許多領域達人的經驗，無論資質如何聰穎，都要在你感興趣的領域，投入大約一萬小時之後，才能進到達人的水平。(還是要睡覺才能學得好喔)
 	</p>
 	<p>
 	這不是科學定律，但是的確有參考價值。
@@ -23,7 +24,7 @@
 	<p>試算一下吧!</p>
 	<p>想想一個你感興趣的領域</p>
 	<p></p>
-	<p>你每週在的學習、研究、詢問、練習、創作、遊玩上，大約投入幾個小時呢？{{week}}小時嗎？</p>
+	<p>你每週在的你感興趣的領域的[學習、研究、詢問、練習、創作、遊玩]上，大約投入幾個小時呢？{{week}}小時嗎？</p>
 	
 	<ion-item>
 		<ion-range min="0" max="56" pin="true" [(ngModel)]="week">

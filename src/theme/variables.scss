@@ -13,7 +13,7 @@ $font-path: "../assets/fonts";
 // http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
 
 $fab-size: 96px;
-$fab-mini-size: 72px;
+$fab-mini-size: 80px;
 
 
 // Named Color Variables
@@ -26,7 +26,8 @@ $fab-mini-size: 72px;
 
 $colors: (
   primary:    #387ef5,
-  secondary:  #32db64,
+  secondary: hsla(125, 85%, 45%, 1),
+  humor: hsla(60, 100%, 90%, 1),
   danger:     #f53d3d,
   light:      #f4f4f4,
   dark:       #222

@@ -6,27 +6,34 @@ page-page1 {
 
   h3 {
   	text-shadow: 0 1px 0 #03a;
-  	font-weight: 900;
   	color: #3c3;
 	  // font-family: ???
   }
 
-  #main {
-    text-align: center;
-    img {
-      max-height: 400px;
-      max-width: 400px;
-      margin: 0 auto;
+  .card-background-page {
+
+    ion-card {
+      position: relative;
+      text-align: center;
     }
+
+    .card-title {
+      position: absolute;
+      top: 36%;
+      font-size: 2em;
+      width: 100%;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .card-subtitle {
+      font-size: 1.0em;
+      position: absolute;
+      top: 52%;
+      width: 100%;
+      color: #fff;
+    }
+
   }
 
-	p {
-	  font-size: 2vmax;
-		line-height: 1.62;
-	  // font-family: ???
-	}
-
-  .button-inner {
-    font-size: 1.6em;
-  }
 }

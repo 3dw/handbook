@@ -7,26 +7,23 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content id = "welcome" padding>
-  <h3 [hidden]="showFABs">
-    <ion-icon name="flask" item-left></ion-icon>
-    自學不難，只要有方法
-  </h3>
+
+<ion-content id = "welcome" class="card-background-page">
   
   <ion-card id="main" (tap)="gotoFabs($event)">
-    <ion-card-content class="center">
       <img src = "img/lead.jpg"/>
 
-      <button ion-button secondary menuToggle>
-        <ion-icon name="arrow-up" item-left></ion-icon>&nbsp;按我開始
-    </button>
+      <div class="card-title">
+        按我開始
+      </div>
 
-    </ion-card-content>
+      <div class="card-subtitle">
+        <ion-icon name="flask" item-left></ion-icon>
+        自學不難，只要有方法
+      </div>
+
   </ion-card>
 
   <span class="gray">本次自學申請還有{{date}}天截止</span>
 
-<!--  <button ion-button secondary menuToggle>
-    <ion-icon name="arrow-back" item-left></ion-icon>&nbsp;開始
-  </button>  -->
 </ion-content>

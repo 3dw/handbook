@@ -1,4 +1,9 @@
 page-qa-detial {
+
+	ion-content, ion-card {
+		background-color: black !important;
+	}
+
 	ion-card-header {
 		transform: scaleY(1.3);
 		font-weight: 900;
@@ -19,6 +24,7 @@ page-qa-detial {
 		}
 	}
 	p {
+		color: black !important;
 		position: relative;
 		font-size: 1.2em !important;
 		margin: 2em 0 !important;
