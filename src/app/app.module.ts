@@ -1,10 +1,13 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
+
 import { Page1 } from '../pages/page1/page1';
 import { FabsPage } from '../pages/fabs/fabs';
 import { Page2 } from '../pages/page2/page2';
 import { QaDetialPage } from '../pages/qa-detial/qa-detial';
+import { CalcTimePage } from '../pages/calc-time/calc-time';
+
 import { InCatagory } from '../pipes/inCatagory'
 
 
@@ -15,6 +18,7 @@ import { InCatagory } from '../pipes/inCatagory'
     FabsPage,
     Page2,
     QaDetialPage,
+    CalcTimePage,
     InCatagory
   ],
   imports: [
@@ -26,7 +30,8 @@ import { InCatagory } from '../pipes/inCatagory'
     Page1,
     FabsPage,
     Page2,
-    QaDetialPage
+    QaDetialPage,
+    CalcTimePage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

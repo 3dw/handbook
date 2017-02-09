@@ -1,0 +1,40 @@
+<!--
+  Generated template for the CalcTime page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>時間精靈</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding (swipe) = "goBack($event)">
+	<p>
+	根據許多領域達人的經驗，無論資質如何聰穎，都要在你感興趣的領域，投入大約一萬小時之後，才能進到達人的水平。
+	</p>
+	<p>
+	這不是科學定律，但是的確有參考價值。
+	</p>
+	<p>試算一下吧!</p>
+	<p>想想一個你感興趣的領域</p>
+	<p></p>
+	<p>你每週在的學習、研究、詢問、練習、創作、遊玩上，大約投入幾個小時呢？{{week}}小時嗎？</p>
+	
+	<ion-item>
+		<ion-range min="0" max="56" pin="true" [(ngModel)]="week">
+			<ion-label range-left>0小時</ion-label>
+      <ion-label range-right>56小時</ion-label>
+    </ion-range>
+  </ion-item>
+
+	<p>一萬小時除以每週{{week}}小時 = {{Math.floor(10000 / week + 0.5)}}週</p>
+	<p>累積{{Math.floor(10000 / week + 0.5)}}週可達一萬小時</p>
+	<p>每年有52週，所以如果照目前的安排，</p>
+	<p>大約需要{{Math.floor(10000 / week / 52 + 0.5)}}年的努力，就能成為這領域的達人。</p>
+
+</ion-content>
