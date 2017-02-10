@@ -13,7 +13,8 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class QaDetialPage {
 	faq: Array<{q: string, c: string, as: string[], es: any[]}>;
-  storage: any;
+  jokeIdx: number;
+  // storage: any;
 
   constructor(
   	public navCtrl: NavController,
@@ -21,6 +22,7 @@ export class QaDetialPage {
 
     // If we navigated to this page, we will have an item available as a nav param
     this.faq = navParams.get('qa');
+    this.jokeIdx = -1;
 
   }
 
@@ -41,8 +43,12 @@ export class QaDetialPage {
     }
   }
 
-  funnyEffect(idx){
-    // do someting...
+  joke(idx) {
+    if (this.jokeIdx == idx) {
+      this.jokeIdx = -1;
+    } else {
+      this.jokeIdx = idx;
+    }
   }
 
 }

@@ -15,16 +15,16 @@
 
 <ion-content padding>
 	<ion-card (swipe) = "goBack($event)">
-	  	<ion-card-header color='primary'>
-			<ion-icon name='bicycle'></ion-icon>
-				{{faq.q}}
-			<span class="tail"></span>
+	  <ion-card-header color='primary' [ngClass]="{'joke': jokeIdx == -1}" (tap) = "joke(-1)">
+				<ion-icon name='bicycle'></ion-icon>
+					{{faq.q}}
+				<span class="tail"></span>
 		</ion-card-header>
 		<ion-card-content>
 			<div *ngFor="let a of faq.as; let $idx = index">
-				<p>
+				<p [ngClass]="{'joke': jokeIdx == $idx}" (tap)="joke($idx)">
 				 	{{a}}			
-				 	<ion-icon name="happy" color="primary" tap=(funnyEffect($idx))></ion-icon>
+				 	<ion-icon name="happy" color="primary"></ion-icon>
 					<span class="tail"></span>
 				</p>
 			</div>

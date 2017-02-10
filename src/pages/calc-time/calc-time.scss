@@ -1,8 +1,15 @@
 page-calc-time {
+	h3 {
+		font-family: "Heiti TC", SimHei, "Hiragino Sans GB", STHeiti, "Times New Roman", Helvetica;
+	}
 	b {
 		border-radius: 1em;
-		padding: 0 1em;
+		margin: 0 0.2em;
+		padding: 0.2em 1em;
 		background-color: #ccf;
+		&.large {
+			font-size: 2em;			
+		}
 		&.green {
 			background-color: #cfc;
 		}

@@ -24,6 +24,7 @@ page-page1 {
       width: 100%;
       font-weight: bold;
       color: #fff;
+      text-shadow: 1px 1px 1px black;
     }
 
     .card-subtitle {
@@ -32,8 +33,11 @@ page-page1 {
       top: 52%;
       width: 100%;
       color: #fff;
+      text-shadow: 1px 1px 1px black;
     }
+  }
 
+  .gray {    
   }
 
 }
