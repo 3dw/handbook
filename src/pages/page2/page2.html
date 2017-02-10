@@ -21,6 +21,7 @@
     <div [ngSwitch]="focusC.t">
       <div *ngFor="let c of catagories">
         <div *ngSwitchCase="c.t">
+          <ion-item-divider color="light">{{c.description}}...</ion-item-divider>
           <button ion-item
               *ngFor="let faq of (faqs | inCatagory:c.t); let $k = index;"
               (tap)="itemTapped($event, faq)" >
@@ -53,7 +54,7 @@
 
 <ion-content id = "long" [hidden]="focusC">
   <ion-item-group *ngFor="let c of catagories; let $j = index;">
-    <ion-item-divider color="light">{{c.t}}</ion-item-divider>
+    <ion-item-divider color="dark">{{c.t}}</ion-item-divider>
     <button ion-item
         *ngFor="let faq of (faqs | inCatagory:c.t); let $k = index;"
         (tap)="itemTapped($event, faq)" >

@@ -55,9 +55,14 @@ export class FabsPage {
     });
   }
 
+  reset() {
+    this.c.sort(() => Math.random() - 0.5);
+  }
+
   actionTapped(event, myCatagory) {
     this.navCtrl.push(Page2, {
       focusC: myCatagory
     })
   }
+
 }
