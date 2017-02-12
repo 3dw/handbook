@@ -33,25 +33,32 @@ export class Page1 {
   gotoFabs(e) {
     this.navCtrl.push(FabsPage, {})
   }
-  /*
-  Choose(e)方法是替代驚喜箱的方案
-  以Import ActionSheetController
-  */
-  Choose(e) {
-    //this.navCtrl.push(FabsPage, {})
+
+
+  //  jumpActionSheet() 方法是比驚奇箱更快的導航方案，待測試
+  jumpActionSheet() {
     let actionSheet = this.actionsheetCtrl.create({
-     title: '選擇前往分類',
+     title: '前往',
      buttons: [
        {
-         text: 'Destructive',
+         text: '自學方法',
          handler: () => {
            console.log('Destructive clicked');
+           // this.navCtrl.push(Page2,{})
          }
        },
        {
-         text: 'Archive',
+         text: '時間精靈',
+         handler: () => {
+           console.log('Destructive clicked');
+           // this.navCtrl.push(CalcTimePage,{})
+         }
+       },
+       {
+         text: '驚奇箱',
          handler: () => {
            console.log('Archive clicked');
+           this.navCtrl.push(FabsPage,{})
          }
        },
        {
@@ -59,6 +66,7 @@ export class Page1 {
          role: 'cancel',
          handler: () => {
            console.log('Cancel clicked');
+           // 
          }
        }
      ]
