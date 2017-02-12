@@ -14,7 +14,7 @@ export class Page1 {
   nextDate2: number;
   y: number;
 
-  constructor(public navCtrl: NavController) {
+  constructor(public actionsheetCtrl: ActionSheetController,public navCtrl: NavController) {
   	this.y = new Date().getFullYear();
   	this.nextDate0 = new Date('April 30, '+(this.y)+' 00:00:00').getTime();
   	this.nextDate1 = new Date('October 30, '+(this.y)+' 00:00:00').getTime();
@@ -33,6 +33,38 @@ export class Page1 {
   gotoFabs(e) {
     this.navCtrl.push(FabsPage, {})
   }
-
+  /*
+  Choose(e)方法是替代驚喜箱的方案
+  */
+  Choose(e) {
+    //this.navCtrl.push(FabsPage, {})
+    let actionSheet = this.actionsheetCtrl.create({
+     title: '選擇前往分類',
+     buttons: [
+       {
+         text: 'Destructive',
+         handler: () => {
+           console.log('Destructive clicked');
+         }
+       },
+       {
+         text: 'Archive',
+         handler: () => {
+           console.log('Archive clicked');
+         }
+       },
+       {
+         text: 'Cancel',
+         role: 'cancel',
+         handler: () => {
+           console.log('Cancel clicked');
+         }
+       }
+     ]
+   });
+   actionSheet.present();
+  }
+  
+  
 
 }
