@@ -35,6 +35,7 @@ export class Page1 {
   }
   /*
   Choose(e)方法是替代驚喜箱的方案
+  以Import ActionSheetController
   */
   Choose(e) {
     //this.navCtrl.push(FabsPage, {})
