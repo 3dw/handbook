@@ -17,7 +17,7 @@
 <ion-content padding (swipe) = "goBack($event)">
 	<h3>試算一下吧!</h3>
 	<p>想想一個你感興趣的領域</p>
-	<p>你每週在這領域上，</p>
+	<p>你<b class="green">每週</b>在這領域上，</p>
 	<p>大約投入幾個小時呢？</p>
 	<p><b class="large">{{week}}小時</b>嗎？</p>
 	
@@ -28,7 +28,8 @@
     </ion-range>
   </ion-item>
 
-	<p>一萬小時除以每週<b>{{week}}小時</b> = <b class="green">{{Math.floor(10000 / week + 0.5)}}週</b></p>
+	<p>一萬小時除以每週<b>{{week}}小時</b></p>
+	<p> = <b class="green">{{Math.floor(10000 / week + 0.5)}}週</b></p>
 	<p>累積<b class="green">{{Math.floor(10000 / week + 0.5)}}週</b>可達一萬小時</p>
 	<p>每年有52週，如果照目前的安排，</p>
 	<p>大約需要<b class="large red">{{Math.floor(10000 / week / 52 + 0.5)}}年</b>的努力，</p>

@@ -1,13 +1,5 @@
 // http://ionicframework.com/docs/v2/theming/
 
-[hidden] {
-	display: none !important;
-}
-
-.gray {
-	color: #999;
-}
-
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
@@ -21,3 +13,35 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+
+[hidden] {
+	display: none !important;
+}
+
+.gray {
+	color: #999;
+}
+
+.action-sheet-title {
+  justify-content: center !important;
+  text-align: center !important;
+ // color: #ccc !important;	
+}
+
+.action-sheet-group .button-inner {
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.action-sheet-button-default:not(.action-sheet-cancel):not(.action-sheet-destructive) {
+	color: blue !important;
+}
+
+.action-sheet-destructive {
+	color: red !important;
+}
+
+.action-sheet-cancel {
+//	color: #666 !important;
+}

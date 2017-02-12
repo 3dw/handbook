@@ -59,7 +59,7 @@ export class Page2 {
   itemTapped(event, faq) {
     this.navCtrl.push(QaDetialPage, {
       qa: faq
-    })
+    }, {animate: false})
   }
 
   cataTapped(event, c) {

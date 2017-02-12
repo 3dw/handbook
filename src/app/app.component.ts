@@ -29,7 +29,7 @@ export class MyApp {
 
     this.tools = [
       { title: '時間精靈', component: CalcTimePage, icon: 'time', color: 'primary' },
-      { title: '施工中', component: Page2, icon: 'bonfire', color:'secondary' }
+      // { title: '風格精靈', component: StylePage, icon: 'bonfire', color:'secondary' }
     ];
 
   }

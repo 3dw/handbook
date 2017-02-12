@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { FabsPage } from '../fabs/fabs';
+import { Page2 } from '../page2/page2';
+import { CalcTimePage } from '../calc-time/calc-time';
+
 import { ActionSheetController} from 'ionic-angular';
 @Component({
   selector: 'page-page1',
@@ -30,39 +33,40 @@ export class Page1 {
 
   }
 
-  gotoFabs(e) {
-    this.navCtrl.push(FabsPage, {})
-  }
 
+  // gotoFabs(e) {
+  //   this.navCtrl.push(FabsPage, {})
+  // }
 
-  //  jumpActionSheet() 方法是比驚奇箱更快的導航方案，待測試
+  // jumpActionSheet() 方法是比驚奇箱更快的導航方案
   jumpActionSheet() {
     let actionSheet = this.actionsheetCtrl.create({
      title: '前往',
      buttons: [
        {
          text: '自學方法',
+         role: 'destructive',
          handler: () => {
            console.log('Destructive clicked');
-           // this.navCtrl.push(Page2,{})
+           this.navCtrl.push(Page2,{})
          }
        },
        {
          text: '時間精靈',
          handler: () => {
-           console.log('Destructive clicked');
-           // this.navCtrl.push(CalcTimePage,{})
+           console.log('Time clicked');
+           this.navCtrl.push(CalcTimePage,{})
          }
        },
        {
          text: '驚奇箱',
          handler: () => {
-           console.log('Archive clicked');
+           console.log('Fabs clicked');
            this.navCtrl.push(FabsPage,{})
          }
        },
        {
-         text: 'Cancel',
+         text: '取消',
          role: 'cancel',
          handler: () => {
            console.log('Cancel clicked');

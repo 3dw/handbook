@@ -18,26 +18,26 @@
       <button [ngClass] = "{'glow': tocks % 2 == 0 && tocks < 8}" ion-fab color="humor" (tap) = "reset()"><ion-icon name="md-add"></ion-icon></button>
       <ion-fab-list side="top" *ngIf="c && c.length">
         <button class="glow" ion-fab middle color="secondary" (tap) = "actionTapped($event, c[0])">
-          <ion-icon [hidden] = "ticks % 4 == 0" [name]="c[0].ion.icon"></ion-icon>
-          <span [hidden] = "ticks % 4 != 0">{{c[0].t}}</span>
+          <ion-icon [hidden] = "ticks % 4 != 0" [name]="c[0].ion.icon"></ion-icon>
+          <span [hidden] = "ticks % 4 == 0">{{c[0].t}}</span>
         </button>
       </ion-fab-list>
       <ion-fab-list side="right" *ngIf="c && c.length">
         <button class="glow" ion-fab color="secondary" (tap) = "actionTapped($event, c[1])">
-          <ion-icon [hidden] = "ticks % 4 == 1" [name]="c[1].ion.icon"></ion-icon>
-          <span [hidden] = "ticks % 4 != 1">{{c[1].t}}</span>
+          <ion-icon [hidden] = "ticks % 4 != 1" [name]="c[1].ion.icon"></ion-icon>
+          <span [hidden] = "ticks % 4 == 1">{{c[1].t}}</span>
         </button>
       </ion-fab-list>
       <ion-fab-list side="bottom" *ngIf="c && c.length">
         <button class="glow" ion-fab color="secondary" (tap) = "actionTapped($event, c[2])">
-          <ion-icon [hidden] = "ticks % 4 == 2" [name]="c[2].ion.icon"></ion-icon>
-          <span [hidden] = "ticks % 4 != 2">{{c[2].t}}</span>
+          <ion-icon [hidden] = "ticks % 4 != 2" [name]="c[2].ion.icon"></ion-icon>
+          <span [hidden] = "ticks % 4 == 2">{{c[2].t}}</span>
         </button>
       </ion-fab-list>
       <ion-fab-list side="left" *ngIf="c && c.length">
         <button class="glow" ion-fab color="secondary" (tap) = "actionTapped($event, c[3])">
-          <ion-icon [hidden] = "ticks % 4 == 3" [name]="c[3].ion.icon"></ion-icon>
-          <span [hidden] = "ticks % 4 != 3">{{c[3].t}}</span>
+          <ion-icon [hidden] = "ticks % 4 != 3" [name]="c[3].ion.icon"></ion-icon>
+          <span [hidden] = "ticks % 4 == 3">{{c[3].t}}</span>
         </button>
       </ion-fab-list>
     </ion-fab>
