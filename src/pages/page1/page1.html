@@ -8,9 +8,9 @@
 </ion-header>
 
 
-<ion-content id = "welcome" class="card-background-page">
+<ion-content id = "welcome" class="card-background-page" (pan)="panEvent()">
   
-  <ion-card id="main" (tap)="jumpActionSheet()">
+  <ion-card id="main" (tap)="panEvent()">
       <img src = "img/lead.jpg"/>
 
       <div class="card-title">
