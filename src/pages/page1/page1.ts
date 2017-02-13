@@ -67,7 +67,7 @@ export class Page1 {
          }
        },
        {
-         text: '驚奇箱',
+         text: '驚喜箱',
          handler: () => {
            console.log('Fabs clicked');
            this.openSheet = false;
