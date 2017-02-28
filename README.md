@@ -36,7 +36,8 @@
 4. 進入專案目錄(即clone下來的handbook資料夾)，下載相關的所有node模組
 
         npm install
- 5. 用瀏覽器測試
+        
+5. 用瀏覽器測試
 
         ionic serve --lab
 6. 每次開始動手前先sync，告一段落請先測試過可以動之後，再commit+sync
@@ -51,12 +52,12 @@
 * 優點: 跨平台測試(加--lab可以同時測ios, andriod, windows三種平台)
 * 缺點: 較慢
 
-      ionic serve --lab
+        ionic serve --lab
 
 ### 方法2：
 * 優點: 較快
 
-      ionic serve
+        ionic serve
 
 可搭配使用瀏覽器的手機摹擬功能：
 1. 用Google Chrome或其他瀏覽器開啟開發人員模式(在執行App頁面按下F12或到選單的更多工具開發人員工具)
