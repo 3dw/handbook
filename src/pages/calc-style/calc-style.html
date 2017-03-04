@@ -12,23 +12,28 @@
 
 </ion-header>
 
-
 <ion-content padding>
-
-<div class="ui container">
-  <div class="slide" [hidden]="step">
-    <div class="ui attached segment">
-      <h1 class="ui heaer"> <i class="purple puzzle icon"></i>何謂學習風格？</h1>
-      <p>現代的教育研究者發現，每個人擅長的學習方式都有不同。即使在同一個課室中，每個人去掌握和理解的方法也不一樣。這就是每個人的學習風格。<i class="purple fire icon"></i></p>
-      <p>學習風格有千百種以上，要細分有很多角度。本測試採取的是「<i class="purple unhide icon"></i>視<i class="purple assistive listening systems icon"></i>聽<i class="purple book icon"></i>讀<i class="purple sign language icon"></i>作」(VARK)架構，特色是只要回答16個問題，就能讓您很快找出適合自己的有效學習方式。</p>
-      <p>原文的問題出處與更多資訊，請至<a href="http://www.vark-learn.com/english/index.asp" target="_blank">VARK介紹網站</a></p>
-    </div><a class="ui large green bottom attached button" tabindex="0" (click)="step = 1">開始測驗!</a>
-  </div>
-  <div [hidden]="!step">
-    <div *ngFor="let q of qs">
-      {{q.t}}
+  <div class="ui container">
+    <div class="slide" [hidden]="step">
+      <div class="ui attached segment">
+        <h1 class="ui heaer"> <i class="purple puzzle icon"></i>何謂學習風格？</h1>
+        <p>現代的教育研究者發現，每個人擅長的學習方式都有不同。即使在同一個課室中，每個人去掌握和理解的方法也不一樣。這就是每個人的學習風格。<i class="purple fire icon"></i></p>
+        <p>學習風格有千百種以上，要細分有很多角度。本測試採取的是「<i class="purple unhide icon"></i>視<i class="purple assistive listening systems icon"></i>聽<i class="purple book icon"></i>讀<i class="purple sign language icon"></i>作」(VARK)架構，特色是只要回答16個問題，就能讓您很快找出適合自己的有效學習方式。</p>
+        <p>原文的問題出處與更多資訊，請至<a href="http://www.vark-learn.com/english/index.asp" target="_blank">VARK介紹網站</a></p>
+      </div><a class="ui large green bottom attached button" tabindex="0" (click)="step = 1">開始測驗!</a>
+    </div>
+    <div [hidden]="!step">
+      <div *ngFor="let q of qs">
+        <div class="ui card">
+          <ion-title>{{q.t}}</ion-title>
+          <ion-list>
+            <ion-item *ngFor="let c of q.cs; let idx = index;">
+            <ion-label>{{c}}</ion-label>
+            <ion-checkbox [(ngModel)]="q.checked[idx]"></ion-checkbox>
+          </ion-item>
+          </ion-list>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-
 </ion-content>
