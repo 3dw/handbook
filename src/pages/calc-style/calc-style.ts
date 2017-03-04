@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-import { OfflineStyleTest } from '../../providers/offline-handbook';
 /*
   Generated class for the CalcStyle page.
 
@@ -10,8 +9,7 @@ import { OfflineStyleTest } from '../../providers/offline-handbook';
 */
 @Component({
   selector: 'page-calc-style',
-  templateUrl: 'calc-style.html',
-  providers: [ OfflineStyleTest ]
+  templateUrl: 'calc-style.html'
 })
 export class CalcStylePage {
 
