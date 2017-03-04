@@ -27,5 +27,5 @@ export class CalcStylePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad CalcStylePage');
   }
+}  
 
-}

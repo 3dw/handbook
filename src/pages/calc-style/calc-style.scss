@@ -3,4 +3,10 @@ page-calc-style {
 		line-height: 1.86;
 		margin: 1em 0;
 	}
+	.toolbar-title {
+		display: block;
+		width: 100%;
+		text-overflow: clip;
+		overflow: auto;
+	}
 }
