@@ -7,6 +7,7 @@ import { FabsPage } from '../pages/fabs/fabs';
 import { Page2 } from '../pages/page2/page2';
 import { QaDetialPage } from '../pages/qa-detial/qa-detial';
 import { CalcTimePage } from '../pages/calc-time/calc-time';
+import { CalcStylePage } from '../pages/calc-style/calc-style';
 
 import { InCatagory } from '../pipes/inCatagory'
 
@@ -19,6 +20,7 @@ import { InCatagory } from '../pipes/inCatagory'
     Page2,
     QaDetialPage,
     CalcTimePage,
+    CalcStylePage,
     InCatagory
   ],
   imports: [
@@ -31,7 +33,8 @@ import { InCatagory } from '../pipes/inCatagory'
     FabsPage,
     Page2,
     QaDetialPage,
-    CalcTimePage
+    CalcTimePage,
+    CalcStylePage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

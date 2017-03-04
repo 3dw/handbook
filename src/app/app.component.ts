@@ -5,6 +5,7 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 import { Page1 } from '../pages/page1/page1';
 import { Page2 } from '../pages/page2/page2';
 import { CalcTimePage } from '../pages/calc-time/calc-time';
+import { CalcStylePage } from '../pages/calc-style/calc-style';
 
 
 @Component({
@@ -29,7 +30,7 @@ export class MyApp {
 
     this.tools = [
       { title: '時間精靈', component: CalcTimePage, icon: 'time', color: 'primary' },
-      // { title: '風格精靈', component: StylePage, icon: 'bonfire', color:'secondary' }
+      { title: '風格精靈', component: CalcStylePage, icon: 'bonfire', color:'secondary' }
     ];
 
   }
