@@ -14,8 +14,15 @@ import { OfflineStyletest } from '../../providers/offline-styletest';
   providers: [ OfflineStyletest ]
 })
 export class CalcStylePage {
+  qs: any[];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  constructor(
+  	public navCtrl: NavController, 
+  	public navParams: NavParams,
+    public offlineStyletest:  OfflineStyletest) {
+
+  	this.qs = offlineStyletest.data.qs;
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CalcStylePage');
