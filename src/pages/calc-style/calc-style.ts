@@ -14,16 +14,20 @@ import { OfflineStyletest } from '../../providers/offline-styletest';
   providers: [ OfflineStyletest ]
 })
 export class CalcStylePage {
+  step: number;
   qs: any[];
   vark: any[];
+  varkName: String[];
 
   constructor(
   	public navCtrl: NavController, 
   	public navParams: NavParams,
     public offlineStyletest:  OfflineStyletest) {
 
+    this.step = 0;
   	this.qs = offlineStyletest.data.qs;
     this.vark = ['v','a','r','k'];
+    this.varkName = ['視覺','聽覺','閱讀','操作'];
   }
 
   ionViewDidLoad() {
@@ -34,6 +38,7 @@ export class CalcStylePage {
   //要算出所有風格的統計數目
   getFinal() {
     var ans = [0,0,0,0];
+    var final = "";
     for (var k = 0; k < this.vark.length; ++k) {
       var c = 0;
       var s = this.vark[k];
@@ -44,6 +49,10 @@ export class CalcStylePage {
       }
       ans[k] = c;
     }
+    for (var i = 0; i < this.varkName.length; ++i) {
+      if (i > 10) final += ans[i];
+    }
+    return final;
   }
   
 
