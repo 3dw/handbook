@@ -43,15 +43,15 @@ export class CalcStylePage {
       var c = 0;
       var s = this.vark[k];
       for (var j = 0; j < this.qs.length; ++j) {
-        var q = this.qs[j]
-        var i = this.vark.indexOf(s);
-        if (q.checked[i]) c++;
+        var q = this.qs[j];
+        if (q.checked[k]) c++;
       }
       ans[k] = c;
     }
     for (var i = 0; i < this.varkName.length; ++i) {
-      if (i > 10) final += ans[i];
+      if (this.qs.filter(function(o){return o.checked[i]}).length > 4) final += this.varkName[i];
     }
+    console.log(final);
     return final;
   }
   

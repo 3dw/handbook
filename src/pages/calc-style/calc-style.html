@@ -47,11 +47,10 @@
           </ion-list>
         </div>
       </div>
-      <button ion-button tabindex="0" (click)="step = 2" [hidden]="step < 2">看結果!</button>
+      <button ion-button tabindex="0" (click)="step = 2" [hidden]="!step">看結果!</button>
     </div>
     <div [hidden]="step < 2">
     | 測驗結果：你是一名「{{getFinal()}}」優勢的學習者!!
-    br
     <!--| {{getNum()}}
     | {{getAdvice()}} -->
 
