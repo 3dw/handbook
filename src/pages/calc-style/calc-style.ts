@@ -15,6 +15,7 @@ import { OfflineStyletest } from '../../providers/offline-styletest';
 })
 export class CalcStylePage {
   qs: any[];
+  vark: any[];
 
   constructor(
   	public navCtrl: NavController, 
@@ -22,21 +23,37 @@ export class CalcStylePage {
     public offlineStyletest:  OfflineStyletest) {
 
   	this.qs = offlineStyletest.data.qs;
+    this.vark = ['v','a','r','k'];
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CalcStylePage');
   }
 
-  getFinal() {
 
+  //要算出所有風格的統計數目
+  getFinal() {
+    var ans = [0,0,0,0];
+    for (var k = 0; k < this.vark.length; ++k) {
+      var c = 0;
+      var s = this.vark[k];
+      for (var j = 0; j < this.qs.length; ++j) {
+        var q = this.qs[j]
+        var i = this.vark.indexOf(s);
+        if (q.checked[i]) c++;
+      }
+      ans[k] = c;
+    }
   }
+  
 
   getNum() {
+    return 3;
 
   }
 
   getAdvice( ) {
+    return 3;
     
   }
 
