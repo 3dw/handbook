@@ -18,6 +18,8 @@ export class CalcStylePage {
   qs: any[];
   vark: any[];
   varkName: String[];
+  maxADV: any;
+  minADV: any;
 
   constructor(
   	public navCtrl: NavController, 
@@ -28,6 +30,9 @@ export class CalcStylePage {
   	this.qs = offlineStyletest.data.qs;
     this.vark = ['v','a','r','k'];
     this.varkName = ['視覺','聽覺','閱讀','操作'];
+    this.maxADV = offlineStyletest.data.maxADV;
+    this.minADV = offlineStyletest.data.minADV;
+
   }
 
   ionViewDidLoad() {
