@@ -10,7 +10,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>分類帽</ion-title>
+    <ion-title>學習風格帽</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -36,23 +36,24 @@
       </div>
       <button ion-button  tabindex="0" (click)="step = 1">開始測驗!</button>
     </div>
-      <div *ngFor="let q of qs" [hidden]="!step">
+      <div *ngFor="let q of qs" [hidden]="step != 1">
         <div class="ui card">
           <ion-title>{{q.t}}(可複選)</ion-title>
           <ion-list>
             <ion-item *ngFor="let c of q.cs; let idx = index;">
-            <ion-label>{{c}}</ion-label>
-            <ion-checkbox [(ngModel)]="q.checked[idx]"></ion-checkbox>
-          </ion-item>
+              <ion-label>{{c}}</ion-label>
+              <ion-toggle [(ngModel)]="q.checked[idx]"></ion-toggle>
+            </ion-item>
           </ion-list>
         </div>
       </div>
       <button ion-button tabindex="0" (click)="step = 2" [hidden]="!step">看結果!</button>
     </div>
     <div [hidden]="step < 2">
-    | 測驗結果：你是一名「{{getFinal()}}」優勢的學習者!!
-    <!--| {{getNum()}}
-    | {{getAdvice()}} -->
+      <p> 測驗結果：你是一名「{{getFinal()[0]}}」優勢的學習者!!</p>
+      <!--| {{getNum()}} -->
+
+      <p class="advice"> {{getFinal()[1]}} </p>
 
     </div>
 </ion-content>

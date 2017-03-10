@@ -33,6 +33,8 @@ export class CalcStylePage {
     this.maxADV = offlineStyletest.data.maxADV;
     this.minADV = offlineStyletest.data.minADV;
 
+    console.log(this.maxADV);
+
   }
 
   ionViewDidLoad() {
@@ -44,6 +46,7 @@ export class CalcStylePage {
   getFinal() {
     var ans = [0,0,0,0];
     var final = "";
+    var advice = "";
     for (var k = 0; k < this.vark.length; ++k) {
       var c = 0;
       var s = this.vark[k];
@@ -54,23 +57,20 @@ export class CalcStylePage {
       ans[k] = c;
     }
     for (var i = 0; i < this.varkName.length; ++i) {
-      if (this.qs.filter(function(o){return o.checked[i]}).length > 4) final += this.varkName[i];
+      if (this.qs.filter(function(o)
+            {return o.checked[i]}).length > 7) {
+                final += this.varkName[i];
+                advice += '\n\n' + this.maxADV[this.vark[i]];
+            }
     }
-    console.log(final);
-    return final;
+    console.log(advice);
+    return [final, advice];
   }
   
 
   getNum() {
-    return 3;
+    return 3; ///
 
   }
-
-  getAdvice( ) {
-    return 3;
-    
-  }
-
-
 }  
 
