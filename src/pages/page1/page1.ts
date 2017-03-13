@@ -88,8 +88,17 @@ export class Page1 {
    actionSheet.present();
   }
   
-  
-  randomImg(){
+  randomImage(imgList){
+	  var imgData = imgList||["img/lead.jpg"];//修改這裡來設定圖片的清單喔
+	  var a = 0;
+	  var b = imgData.length;
+	  if (a > b) {
+	  	var c = a;
+	  	a = b;
+	  	b = c;
+	  }
+	  var randomNumber = Math.floor(Math.random() * (b - a + 1) + a);
+	  return imgData[randomNumber];
   }
 
 }
