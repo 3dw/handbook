@@ -89,5 +89,7 @@ export class Page1 {
   }
   
   
+  randomImg(){
+  }
 
 }
