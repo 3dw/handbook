@@ -49,7 +49,7 @@ export class CalcStylePage {
     var advice = "";
     for (var k = 0; k < this.vark.length; ++k) {
       var c = 0;
-      var s = this.vark[k];
+      // var s = this.vark[k];
       for (var j = 0; j < this.qs.length; ++j) {
         var q = this.qs[j];
         if (q.checked[k]) c++;
@@ -69,8 +69,7 @@ export class CalcStylePage {
   
 
   getNum() {
-    return 3; ///
-
+    return 3; /// 要改
   }
 }  
 
