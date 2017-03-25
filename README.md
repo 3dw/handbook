@@ -2,7 +2,7 @@
 自學問答集-手機App版
 
 
-##參與版本控制
+## 參與版本控制
 
 歡迎協作，請先：
 
@@ -31,15 +31,20 @@
 2. 下載並安裝[node.js](https://nodejs.org/en/)。這會同時安裝它的套件管理器npm
 3. 下載ionic。在命令列(window系統則是在node command prompt)輸入
 
-        npm install -g cordova ionic
+```
+npm install -g cordova ionic
+```
 
 4. 進入專案目錄(即clone下來的handbook資料夾)，下載相關的所有node模組
 
-        npm install
-        
+```
+npm install
+```
 5. 用瀏覽器測試
 
-        ionic serve --lab
+```
+ionic serve --lab
+```
 6. 每次開始動手前先sync，告一段落請先測試過可以動之後，再commit+sync
 
 7. 寫程式就像做實驗，必須不斷的嘗試。除了專案本身，還可以另外開一個自己可以為所欲為的沙盒(sandbox)。沙盒請開新的專案或fork，不要直接更新此專案。
