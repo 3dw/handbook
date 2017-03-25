@@ -19,7 +19,7 @@
 
 * 資源共享與資訊擴充，可以到[本專案的共筆維基區](https://github.com/3dw/handbook/wiki/%E5%AD%B8%E7%BF%92%E8%B3%87%E6%BA%90)
 
-##開發環境
+## 開發環境
 
 框架使用[ionic2](https://ionicframework.com/)及[angular2](https://angular.io/)，請上去閱讀。
 (相關說明文主要都是英文或簡中，可選擇適合自己的來讀)
