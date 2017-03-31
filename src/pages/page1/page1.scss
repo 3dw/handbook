@@ -16,8 +16,9 @@ page-page1 {
       position: relative;
       text-align: center;
       img {
+        display: inline-block;
         max-height: 66vh;
-        max-width: 66vh;
+        max-width: 40vh;
       }
     }
 
