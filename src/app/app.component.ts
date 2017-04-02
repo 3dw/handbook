@@ -29,8 +29,8 @@ export class MyApp {
     ];
 
     this.tools = [
-      { title: '時間精靈', component: CalcTimePage, icon: 'time', color: 'primary' },
-      { title: '風格精靈', component: CalcStylePage, icon: 'key', color:'secondary' }
+      { title: '時間精靈', component: CalcTimePage, icon: 'time', color: 'primary' }
+      // { title: '風格精靈', component: CalcStylePage, icon: 'key', color:'secondary' }
     ];
 
   }
