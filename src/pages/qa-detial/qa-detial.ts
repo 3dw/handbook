@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Http } from '@angular/http';
 import { NavController, NavParams } from 'ionic-angular';
 
 /*
@@ -19,7 +20,8 @@ export class QaDetialPage {
 
   constructor(
   	public navCtrl: NavController,
-    public navParams: NavParams) {
+    public navParams: NavParams,
+    public http: Http) {
 
     // If we navigated to this page, we will have an item available as a nav param
     this.faq = navParams.get('qa');
@@ -55,36 +57,34 @@ export class QaDetialPage {
 
   feed(x, q) {
     // ... POST FEEDBACK TO ETHERCALC
-    /*  Translate following Angular1 code to Angular2 Get & Post
-    $http({
-        method : 'GET',
-        url : 'https://ethercalc.org/handbook-feedback.csv'
-          }).then(
-            function(res) {
-                var time = new Date().toString();
-                var d = res.data;
-                console.log(d);
-                cell_lenth = d.split("\n").length;
-                console.log(cell_lenth);
-                var url = 'https://ethercalc.org/_/handbook-feedback';
-                my_post( 'A' + cell_lenth, time);
-                my_post( 'B' + cell_lenth, 'mobile');
-                my_post( 'C' + cell_lenth, x);
-                my_post( 'D' + cell_lenth, q);
-                function my_post(cell,text) {
-                  $http({
-                    method : 'POST',
-                    url: url,
-                    dataType: 'application/json',
-                    processData: false,
-                    //data: { "command" : 'append' + '???'}
-                    data: { "command": 'set ' + cell + ' text t ' + text}
-                  });
-                }
-            }, function(res){
-              console.log(res.statusText)
-            }
-        )
+    /* DEBUG THIS
+    this.http.get('https://ethercalc.org/handbook-feedback.csv')
+          .map(res => res.json())
+          .subscribe(data => {
+            // we've got back the raw data, now generate the core schedule data
+            // and save the data for later reference
+            var time = new Date().toString();
+            var d = data;
+            console.log(d);
+            var cell_lenth = d.split("\n").length;
+            console.log(cell_lenth);
+            var url = 'https://ethercalc.org/_/handbook-feedback';
+            my_post( 'A' + cell_lenth, time);
+            my_post( 'B' + cell_lenth, 'mobile');
+            my_post( 'C' + cell_lenth, x);
+            my_post( 'D' + cell_lenth, q);
+            function my_post(cell, text) {
+              this.http.post(this.url, 
+                      { "command": 'set ' + cell + ' text t ' + text }, {
+                          dataType: 'application/json',
+                          processData: false
+                        }
+                      )
+                      .map(res => res.json())
+                      .catch(err => console.log(err))
+              }
+          });
+    
       */
   }
 }
