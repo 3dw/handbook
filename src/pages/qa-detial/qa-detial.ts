@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Http } from '@angular/http';
+import { Headers, RequestOptions, Http } from '@angular/http';
 import { NavController, NavParams } from 'ionic-angular';
 
 /*
@@ -57,34 +57,39 @@ export class QaDetialPage {
 
   feed(x, q) {
     // ... POST FEEDBACK TO ETHERCALC
-    /* DEBUG THIS
+    console.log("aaa");
+    
     this.http.get('https://ethercalc.org/handbook-feedback.csv')
-          .map(res => res.json())
+          .map(res => {
+            console.log(res);
+            return res['_body'] || '';
+          })
           .subscribe(data => {
             // we've got back the raw data, now generate the core schedule data
             // and save the data for later reference
             var time = new Date().toString();
             var d = data;
-            console.log(d);
             var cell_lenth = d.split("\n").length;
             console.log(cell_lenth);
             var url = 'https://ethercalc.org/_/handbook-feedback';
-            my_post( 'A' + cell_lenth, time);
-            my_post( 'B' + cell_lenth, 'mobile');
-            my_post( 'C' + cell_lenth, x);
-            my_post( 'D' + cell_lenth, q);
-            function my_post(cell, text) {
-              this.http.post(this.url, 
-                      { "command": 'set ' + cell + ' text t ' + text }, {
-                          dataType: 'application/json',
-                          processData: false
-                        }
-                      )
-                      .map(res => res.json())
-                      .catch(err => console.log(err))
-              }
+            this.my_post( url, 'A' + cell_lenth, time);
+            this.my_post( url, 'B' + cell_lenth, 'mobile');
+            this.my_post( url, 'C' + cell_lenth, x);
+            this.my_post( url, 'D' + cell_lenth, q);
+            
           });
+    }
     
-      */
-  }
+    my_post(url, cell, text) {
+      console.log(url);
+      console.log(cell);
+      console.log(text);
+      /* debug here */
+      let headers = new Headers({ 'Content-Type': 'application/json'});
+      let options = new RequestOptions({ headers: headers,
+                  body: {'dataType': 'application/json', processData: false }});
+      this.http.post(url, 
+        { "command": 'set ' + cell + ' text t ' + text }, options)
+    }
+
 }

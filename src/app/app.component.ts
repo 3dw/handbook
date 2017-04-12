@@ -5,7 +5,6 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 import { Page1 } from '../pages/page1/page1';
 import { Page2 } from '../pages/page2/page2';
 import { CalcTimePage } from '../pages/calc-time/calc-time';
-import { CalcStylePage } from '../pages/calc-style/calc-style';
 
 
 @Component({
