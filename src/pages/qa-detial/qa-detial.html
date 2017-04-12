@@ -29,10 +29,24 @@
 				</p>
 			</div>
 		</ion-card-content>
+		<ion-card-content class="center" [hidden]="feedback">
+			<p>這對您有幫助嗎？</p>
+			<button ion-button color="secondary" (click)="feedback=true; feed(true, faq.q)">
+	    		<ion-icon name="color-palette" item-left>有</ion-icon>
+	  		</button>
+			<button ion-button color="danger" (click)="feedback=true; feed(false, faq.q)">
+	    		<ion-icon name="close-circle" item-left>沒有</ion-icon>
+	  		</button>
+		</ion-card-content>
+		<ion-card-content class="center" [hidden]="!feedback">
+			<p>
+				<ion-icon name="color-palette" item-left></ion-icon>謝謝您的回報！
+			</p>
+		</ion-card-content>
 		<ion-card-content class="center">
-			<button ion-button secondary menuToggle>
-	    	<ion-icon name="arrow-back" item-left>更多</ion-icon>
-	  	</button>
+			<button ion-button menuToggle>
+	    		<ion-icon name="arrow-back" item-left>更多</ion-icon>
+	  		</button>
 		</ion-card-content>
 	</ion-card>
 

@@ -14,6 +14,7 @@ import { NavController, NavParams } from 'ionic-angular';
 export class QaDetialPage {
 	faq: Array<{q: string, c: string, as: string[], es: any[]}>;
   jokeIdx: number;
+  feedback: boolean;
   // storage: any;
 
   constructor(
@@ -23,6 +24,7 @@ export class QaDetialPage {
     // If we navigated to this page, we will have an item available as a nav param
     this.faq = navParams.get('qa');
     this.jokeIdx = -1;
+    this.feedback = false;
 
   }
 
@@ -51,4 +53,38 @@ export class QaDetialPage {
     }
   }
 
+  feed(x, q) {
+    // ... POST FEEDBACK TO ETHERCALC
+    /*  Translate following Angular1 code to Angular2 Get & Post
+    $http({
+        method : 'GET',
+        url : 'https://ethercalc.org/handbook-feedback.csv'
+          }).then(
+            function(res) {
+                var time = new Date().toString();
+                var d = res.data;
+                console.log(d);
+                cell_lenth = d.split("\n").length;
+                console.log(cell_lenth);
+                var url = 'https://ethercalc.org/_/handbook-feedback';
+                my_post( 'A' + cell_lenth, time);
+                my_post( 'B' + cell_lenth, 'mobile');
+                my_post( 'C' + cell_lenth, x);
+                my_post( 'D' + cell_lenth, q);
+                function my_post(cell,text) {
+                  $http({
+                    method : 'POST',
+                    url: url,
+                    dataType: 'application/json',
+                    processData: false,
+                    //data: { "command" : 'append' + '???'}
+                    data: { "command": 'set ' + cell + ' text t ' + text}
+                  });
+                }
+            }, function(res){
+              console.log(res.statusText)
+            }
+        )
+      */
+  }
 }
