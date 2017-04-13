@@ -76,7 +76,6 @@ export class QaDetialPage {
             this.my_post( url, 'B' + cell_lenth, 'mobile');
             this.my_post( url, 'C' + cell_lenth, x);
             this.my_post( url, 'D' + cell_lenth, q);
-            
           });
     }
     
@@ -85,9 +84,11 @@ export class QaDetialPage {
       console.log(cell);
       console.log(text);
       /* debug here */
-      let headers = new Headers({ 'Content-Type': 'application/json'});
-      let options = new RequestOptions({ headers: headers,
-                  body: {'dataType': 'application/json', processData: false }});
+      let headers = new Headers({ 
+        'Content-Type': 'text/plain', 
+        'dataType': 'application/json', 
+        'processData': false});
+      let options = new RequestOptions({ headers: headers});
       this.http.post(url, 
         { "command": 'set ' + cell + ' text t ' + text }, options)
     }
