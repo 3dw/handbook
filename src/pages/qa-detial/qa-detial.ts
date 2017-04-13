@@ -85,12 +85,11 @@ export class QaDetialPage {
       console.log(text);
       /* debug here */
       let headers = new Headers({ 
-        'Content-Type': 'application/json', 
-        'dataType': 'application/json', 
-        'processData': false});
+        'Content-Type': 'application/json'});
       let options = new RequestOptions({ headers: headers});
       this.http.post(url, 
-        JSON.stringify({ "command": 'set ' + cell + ' text t ' + text }), options)
+        { "command": 'set ' + cell + ' text t ' + text }, options)
+      .subscribe()
     }
 
 }
