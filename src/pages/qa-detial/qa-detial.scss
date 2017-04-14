@@ -21,8 +21,13 @@ page-qa-detial {
 			width: 0;
 			height: 0;
 			border-top: 1.2em solid #ccf;
-			border-right: 1.5em solid transparent;
+			border-right: 1.5em solid transparent;	
 		}
+		img {
+				width: 60px;
+				height: 45px;
+				float: left;
+			}
 	}
 	p {
 		color: black !important;
@@ -45,6 +50,16 @@ page-qa-detial {
 			height: 0;
 			border-top: 1.2em solid #cfc;
 			border-left: 1.5em solid transparent;
+		}
+		img {
+			width: 40px;
+			height: 60px;
+			float: right;
+			position: relative;
+			top: 2.5em;
+			left: 1.5em;
+			transform: rotateY(180deg);
+			z-index: 999;
 		}
 	}
 	.center {

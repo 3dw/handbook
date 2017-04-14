@@ -16,21 +16,25 @@
 <ion-content padding>
 	<ion-card (swipe) = "goBack($event)">
 	  <ion-card-header color='primary' [ngClass]="{'joke': jokeIdx == -1}" (tap) = "joke(-1)">
-				<ion-icon name='bicycle'></ion-icon>
-					{{faq.q}}
-				<span class="tail"></span>
+			<img src = "img/rabbit.png"/>
+			{{faq.q}}
+				<span class="tail">
+				</span>
+
 		</ion-card-header>
 		<ion-card-content>
 			<div *ngFor="let a of faq.as; let $idx = index">
 				<p [ngClass]="{'joke': jokeIdx == $idx}" (tap)="joke($idx)">
-				 	{{a}}			
+					
+					{{a}}			
 				 	<ion-icon name="happy" color="primary"></ion-icon>
+				 	<img src = "img/bear.png"/>
 					<span class="tail"></span>
 				</p>
 			</div>
 		</ion-card-content>
 		<ion-card-content class="center" [hidden]="feedback">
-			<p>這對您有幫助嗎？</p>
+			<p>這對您有幫助嗎？<img src = "img/bear.png"/></p>
 			<button ion-button color="secondary" (click)="feedback=true; feed(true, faq.q)">
 	    		<ion-icon name="color-palette" item-left>有</ion-icon>
 	  		</button>
@@ -41,6 +45,7 @@
 		<ion-card-content class="center" [hidden]="!feedback">
 			<p>
 				<ion-icon name="color-palette" item-left></ion-icon>謝謝您的回報！
+				<img src = "img/bear.png"/>
 			</p>
 		</ion-card-content>
 		<ion-card-content class="center">
