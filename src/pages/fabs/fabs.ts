@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { Observable } from 'rxjs/Rx';
 import { Page2 } from '../page2/page2';
+import { CalcTimePage } from '../calc-time/calc-time';
 import { HandbookService } from '../../providers/handbook-service';
 import { OfflineHandbook } from '../../providers/offline-handbook';
 
@@ -14,7 +15,7 @@ import { OfflineHandbook } from '../../providers/offline-handbook';
 @Component({
   selector: 'page-fabs',
   templateUrl: 'fabs.html',
-  providers: [HandbookService, OfflineHandbook, Page2]
+  providers: [HandbookService, OfflineHandbook, Page2, CalcTimePage]
 })
 export class FabsPage {
   c:  Array<{t: string, color: string, icon:string, ion:any}>;
@@ -63,6 +64,10 @@ export class FabsPage {
     this.navCtrl.push(Page2, {
       focusC: myCatagory
     })
+  }
+
+  timeTapped() {
+    this.navCtrl.push(CalcTimePage);
   }
 
 }

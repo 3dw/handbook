@@ -29,9 +29,9 @@
         </button>
       </ion-fab-list>
       <ion-fab-list side="bottom" *ngIf="c && c.length">
-        <button class="glow" ion-fab color="secondary" (tap) = "actionTapped($event, c[2])">
-          <ion-icon [hidden] = "ticks % 4 != 2" [name]="c[2].ion.icon"></ion-icon>
-          <span [hidden] = "ticks % 4 == 2">{{c[2].t}}</span>
+        <button class="glow" ion-fab color="primary" (tap) = "timeTapped()">
+          <ion-icon [hidden] = "ticks % 4 != 2" name="alarm"></ion-icon>
+          <span [hidden] = "ticks % 4 == 2">時間</span>
         </button>
       </ion-fab-list>
       <ion-fab-list side="left" *ngIf="c && c.length">
