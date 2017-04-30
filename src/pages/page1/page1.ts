@@ -29,9 +29,9 @@ export class Page1 {
   		(this.nextDate0 - new Date().getTime()) / 1000 / 60 / 60 / 24,
   		(this.nextDate1 - new Date().getTime()) / 1000 / 60 / 60 / 24,
   		(this.nextDate2 - new Date().getTime()) / 1000 / 60 / 60 / 24
-	]
+	].filter(function(x){return x >= 0});
 
-  	this.date = Math.floor(Math.min(ds[0],ds[1],ds[2]));
+  	this.date = Math.floor(ds[0]);
   }
 
   panEvent() {
