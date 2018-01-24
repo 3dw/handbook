@@ -40,7 +40,7 @@ npm install -g cordova ionic
 ```
 npm install
 ```
-*注意:如果要移植專案到其他檔案位置，請先將node_module資料夾刪除再執行以上指令
+*注意:如果要移植專案到其他檔案位置，請先將node_module資料夾刪除再執行以上指令*
 
 5. 用瀏覽器測試
 
